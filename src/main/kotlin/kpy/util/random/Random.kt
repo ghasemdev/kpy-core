@@ -2,25 +2,15 @@ package kpy.util.random
 
 import java.util.*
 import kotlin.random.asKotlinRandom
-import kotlin.random.nextInt
-import kotlin.random.nextLong
 
 /*
 * Random extensions method from python language
 *
 * author jakode
-* since v1.0.0 5/11/2021
+* since v1.0.1 07/13/2021
 */
 
 private val rand = Random()
-
-/**
- * Gets the next random `Int` from the random number generator in the specified [range].
- *
- * Generates an `Int` random value uniformly distributed in the specified [range]:
- * from `range.start` inclusive to `range.endInclusive` inclusive.
- */
-fun kotlin.random.Random.randInt(range: IntRange) = randomInt(range)
 
 /**
  * Gets the next random `Int` from the random number generator.
@@ -29,21 +19,11 @@ fun kotlin.random.Random.randInt(range: IntRange) = randomInt(range)
  * @param end End of range
  * @param step range steps
  */
-fun kotlin.random.Random.randInt(start: Int = 0, end: Int, step: Int = 1) = randomInt(start, end, step)
-
-private fun randomInt(range: IntRange): Int = rand.asKotlinRandom().nextInt(range)
+fun kotlin.random.Random.nextInt(start: Int = 0, end: Int, step: Int = 1) = randomInt(start, end, step)
 
 private fun randomInt(start: Int, end: Int, step: Int): Int {
     return rand.nextInt((end + step - start) / step) * step + start
 }
-
-/**
- * Gets the next random `Long` from the random number generator in the specified [range].
- *
- * Generates an `Long` random value uniformly distributed in the specified [range]:
- * from `range.start` inclusive to `range.endInclusive` inclusive.
- */
-fun kotlin.random.Random.randLong(range: LongRange) = randomLong(range)
 
 /**
  * Gets the next random `Long` from the random number generator.
@@ -52,9 +32,7 @@ fun kotlin.random.Random.randLong(range: LongRange) = randomLong(range)
  * @param end End of range
  * @param step range steps
  */
-fun kotlin.random.Random.randLong(start: Long = 0, end: Long, step: Long = 1) = randomLong(start, end, step)
-
-private fun randomLong(range: LongRange): Long = rand.asKotlinRandom().nextLong(range)
+fun kotlin.random.Random.nextLong(start: Long = 0, end: Long, step: Long = 1) = randomLong(start, end, step)
 
 private fun randomLong(start: Long, end: Long, step: Long): Long {
     return rand.asKotlinRandom().nextLong((end + step - start) / step) * step + start

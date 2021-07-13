@@ -8,18 +8,6 @@ import kotlin.random.Random
 class RandomKtTest {
 
     @Test
-    fun randInt() {
-        val number = Random.randInt(0..100)
-        assertThat(number, `in`((0..100).toList()))
-    }
-
-    @Test
-    fun randLong() {
-        val number = Random.randLong(0..100L)
-        assertThat(number, `in`((0..100L).toList()))
-    }
-
-    @Test
     fun `choice array`() {
         val array = arrayOf(1, 2, 3, 4, 5)
         val number = Random.choice(array)
