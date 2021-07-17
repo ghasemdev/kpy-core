@@ -7,6 +7,19 @@ package kpy.util.extension
 * @since v1.0.0 07/12/2021
 */
 
+/**
+ * Repeats a string to the number of repetitions
+ *
+ * Example:
+ * ```
+ *      println("10" * 5)
+ *      output: 1010101010
+ * ```
+ */
+operator fun String.times(repeat: Int): String {
+    return buildString { repeat(repeat) { append(this@times) } }
+}
+
 /** not or */
 infix fun Boolean.nor(other: Boolean) = !(this or other)
 

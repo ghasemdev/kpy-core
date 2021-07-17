@@ -6,6 +6,12 @@ import org.junit.jupiter.api.Test
 class OperationsKtTest {
 
     @Test
+    fun `String times`() {
+        val number = "25" * 10
+        assertThat(number).isEqualTo("25252525252525252525")
+    }
+
+    @Test
     fun nor() {
         assertThat(0 nor 0).isEqualTo(1)
         assertThat(0 nor 1).isEqualTo(0)

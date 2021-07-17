@@ -1,4 +1,4 @@
-package kpy.util.struct
+package kpy.struct
 
 /**
  * DataState has three mode
