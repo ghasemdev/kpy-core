@@ -6,6 +6,87 @@ import org.junit.jupiter.api.Test
 class CollectionsKtTest {
 
     @Test
+    fun `build array from range`() {
+        val intArray = arrayOf(1..10)
+        assertThat(intArray.size).isEqualTo(10)
+
+        val longArray = arrayOf(1..10L)
+        assertThat(longArray.size).isEqualTo(10)
+    }
+
+    @Test
+    fun `build list from range`() {
+        val intList = listOf(1..10)
+        assertThat(intList.size).isEqualTo(10)
+
+        val longList = listOf(1..10L)
+        assertThat(longList.size).isEqualTo(10)
+    }
+
+    @Test
+    fun `build mutable list from range`() {
+        val intMutableList = mutableListOf(1..10)
+        assertThat(intMutableList.size).isEqualTo(10)
+
+        val longMutableList = mutableListOf(1..10L)
+        assertThat(longMutableList.size).isEqualTo(10)
+    }
+
+    @Test
+    fun `build set from range`() {
+        val intSet = setOf(1..10)
+        assertThat(intSet.size).isEqualTo(10)
+
+        val longSet = setOf(1..10L)
+        assertThat(longSet.size).isEqualTo(10)
+    }
+
+    @Test
+    fun `build mutable set from range`() {
+        val intMutableSet = mutableSetOf(1..10)
+        assertThat(intMutableSet.size).isEqualTo(10)
+
+        val longMutableSet = mutableSetOf(1..10L)
+        assertThat(longMutableSet.size).isEqualTo(10)
+    }
+
+    @Test
+    fun `build hash set from range`() {
+        val intHashSet = hashSetOf(1..10)
+        assertThat(intHashSet.size).isEqualTo(10)
+
+        val longHashSet = hashSetOf(1..10L)
+        assertThat(longHashSet.size).isEqualTo(10)
+    }
+
+    @Test
+    fun `build linked set from range`() {
+        val intLinkedSet = linkedSetOf(1..10)
+        assertThat(intLinkedSet.size).isEqualTo(10)
+
+        val longLinkedSet = linkedSetOf(1..10L)
+        assertThat(longLinkedSet.size).isEqualTo(10)
+    }
+
+    @Test
+    fun `build sorted set from range`() {
+        val intSortedSet = sortedSetOf(1..10)
+        assertThat(intSortedSet.size).isEqualTo(10)
+
+        val longSortedSet = sortedSetOf(1..10L)
+        assertThat(longSortedSet.size).isEqualTo(10)
+    }
+
+    @Test
+    fun `build array list from range`() {
+        val intArrayList = arrayListOf(1..10)
+        assertThat(intArrayList.size).isEqualTo(10)
+
+        val longArrayList = arrayListOf(1..10L)
+        assertThat(longArrayList.size).isEqualTo(10)
+    }
+
+    @Test
     fun testLinkedListOf() {
         val linklist = linkedListOf(1, 2, 3, 4, 5, 6)
         assertThat(linklist.size).isEqualTo(6)
@@ -22,6 +103,15 @@ class CollectionsKtTest {
     }
 
     @Test
+    fun `build linked list from range`() {
+        val intLinkedList = linkedListOf(1..10)
+        assertThat(intLinkedList.size).isEqualTo(10)
+
+        val longLinkedList = linkedListOf(1..10L)
+        assertThat(longLinkedList.size).isEqualTo(10)
+    }
+
+    @Test
     fun testVectorOf() {
         val vector = vectorOf(1, 2, 3, 4, 5, 6)
         assertThat(vector.size).isEqualTo(6)
@@ -29,6 +119,15 @@ class CollectionsKtTest {
         assertThat(vector[0]).isEqualTo(1)
         vector.add(10)
         assertThat(vector.last()).isEqualTo(10)
+    }
+
+    @Test
+    fun `build vector from range`() {
+        val intVector = vectorOf(1..10)
+        assertThat(intVector.size).isEqualTo(10)
+
+        val longVector = vectorOf(1..10L)
+        assertThat(longVector.size).isEqualTo(10)
     }
 
     @Test
@@ -40,6 +139,15 @@ class CollectionsKtTest {
         assertThat(stack.peek()).isEqualTo(5)
         stack.push(4)
         assertThat(stack.peek()).isEqualTo(4)
+    }
+
+    @Test
+    fun `build stack from range`() {
+        val intStack = stackOf(1..10)
+        assertThat(intStack.size).isEqualTo(10)
+
+        val longStack = stackOf(1..10L)
+        assertThat(longStack.size).isEqualTo(10)
     }
 
     @Test
@@ -55,6 +163,15 @@ class CollectionsKtTest {
     }
 
     @Test
+    fun `build queue from range`() {
+        val intQueue = queueOf(1..10)
+        assertThat(intQueue.size).isEqualTo(10)
+
+        val longQueue = queueOf(1..10L)
+        assertThat(longQueue.size).isEqualTo(10)
+    }
+
+    @Test
     fun testPriorityQueueOf() {
         val pQueue = priorityQueueOf(2, 3, 6, 5, 9, 8, 4, 7)
         assertThat(pQueue.size).isEqualTo(8)
@@ -64,6 +181,15 @@ class CollectionsKtTest {
         pQueue.add(4)
         assertThat(pQueue.peek()).isEqualTo(3)
         assertThat(pQueue.poll()).isEqualTo(3)
+    }
+
+    @Test
+    fun `build priority queue from range`() {
+        val intPriorityQueue = priorityQueueOf(1..10)
+        assertThat(intPriorityQueue.size).isEqualTo(10)
+
+        val longPriorityQueue = priorityQueueOf(1..10L)
+        assertThat(longPriorityQueue.size).isEqualTo(10)
     }
 
     @Test
@@ -87,6 +213,15 @@ class CollectionsKtTest {
     }
 
     @Test
+    fun `build deque from range`() {
+        val intDeque = dequeOf(1..10)
+        assertThat(intDeque.size).isEqualTo(10)
+
+        val longDeque = dequeOf(1..10L)
+        assertThat(longDeque.size).isEqualTo(10)
+    }
+
+    @Test
     fun testArrayDequeOf() {
         val arrayDeque = arrayDequeOf(1, 2, 3, 4, 5, 6)
         assertThat(arrayDeque.size).isEqualTo(6)
@@ -101,6 +236,15 @@ class CollectionsKtTest {
         arrayDeque.addLast(14)
         assertThat(arrayDeque.first()).isEqualTo(14)
         assertThat(arrayDeque.last()).isEqualTo(14)
+    }
+
+    @Test
+    fun `build array deque from range`() {
+        val intArrayDequeOf = arrayDequeOf(1..10)
+        assertThat(intArrayDequeOf.size).isEqualTo(10)
+
+        val longArrayDequeOf = arrayDequeOf(1..10L)
+        assertThat(longArrayDequeOf.size).isEqualTo(10)
     }
 
     @Test

@@ -1,12 +1,12 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.5.20'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.21'
     id 'application'
     id 'java-library'
     id 'java'
 }
 
 group ='com.github.jakode2020'
-version = '0.2.0-build2'
+version = '0.2.0-build3'
 
 repositories {
     mavenCentral()
