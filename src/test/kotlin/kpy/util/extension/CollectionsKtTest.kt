@@ -136,4 +136,92 @@ class CollectionsKtTest {
         val set = setOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
         assertThat(set.tail(6)).isEqualTo(listOf(4, 5, 6, 7, 8, 9))
     }
+
+    @Test
+    fun `find pair of sum int`() {
+        val numbers1 = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        val pair1 = numbers1.findPairOfSum(10)
+        pair1?.let { (x, y) -> assertThat(x + y).isEqualTo(10) }
+
+        val numbers2 = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        val pair2 = numbers2.findPairOfSum(10)
+        pair2?.let { (x, y) -> assertThat(x + y).isEqualTo(10) }
+    }
+
+    @Test
+    fun `find pair of sum long`() {
+        val numbers1 = listOf(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L)
+        val pair1 = numbers1.findPairOfSum(10L)
+        pair1?.let { (x, y) -> assertThat(x + y).isEqualTo(10L) }
+
+        val numbers2 = listOf(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L)
+        val pair2 = numbers2.findPairOfSum(10L)
+        pair2?.let { (x, y) -> assertThat(x + y).isEqualTo(10L) }
+    }
+
+    @Test
+    fun `find pair of sum float`() {
+        val numbers1 = listOf(1F, 2F, 3F, 4.7F, 5F, 6F, 7F, 8F, 9F, 10F)
+        val pair1 = numbers1.findPairOfSum(10.7F)
+        pair1?.let { (x, y) -> assertThat(x + y).isEqualTo(10.7F) }
+
+        val numbers2 = listOf(1F, 2F, 3F, 4.7F, 5F, 6F, 7F, 8F, 9F, 10F)
+        val pair2 = numbers2.findPairOfSum(10.7F)
+        pair2?.let { (x, y) -> assertThat(x + y).isEqualTo(10.7F) }
+    }
+
+    @Test
+    fun `find pair of sum double`() {
+        val numbers1 = listOf(1.0, 2.0, 3.0, 4.7, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0)
+        val pair1 = numbers1.findPairOfSum(10.7)
+        pair1?.let { (x, y) -> assertThat(x + y).isEqualTo(10.7) }
+
+        val numbers2 = listOf(1.0, 2.0, 3.0, 4.7, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0)
+        val pair2 = numbers2.findPairOfSum(10.7)
+        pair2?.let { (x, y) -> assertThat(x + y).isEqualTo(10.7) }
+    }
+
+    @Test
+    fun `find triple of sum int`() {
+        val numbers1 = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        val triple1 = numbers1.findTripleOfSum(10)
+        triple1?.let { (x, y, z) -> assertThat(x + y + z).isEqualTo(10) }
+
+        val numbers2 = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        val triple2 = numbers2.findTripleOfSum(10)
+        triple2?.let { (x, y, z) -> assertThat(x + y + z).isEqualTo(10) }
+    }
+
+    @Test
+    fun `find triple of sum long`() {
+        val numbers1 = listOf(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L)
+        val triple1 = numbers1.findTripleOfSum(10L)
+        triple1?.let { (x, y, z) -> assertThat(x + y + z).isEqualTo(10L) }
+
+        val numbers2 = listOf(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L)
+        val triple2 = numbers2.findTripleOfSum(10L)
+        triple2?.let { (x, y, z) -> assertThat(x + y + z).isEqualTo(10L) }
+    }
+
+    @Test
+    fun `find triple of sum float`() {
+        val numbers1 = listOf(1F, 2F, 3F, 4.7F, 5F, 6F, 7F, 8F, 9F, 10F)
+        val triple1 = numbers1.findTripleOfSum(10.7F)
+        triple1?.let { (x, y, z) -> assertThat(x + y + z).isEqualTo(10.7F) }
+
+        val numbers2 = listOf(1F, 2F, 3F, 4.7F, 5F, 6F, 7F, 8F, 9F, 10F)
+        val triple2 = numbers2.findTripleOfSum(10.7F)
+        triple2?.let { (x, y, z) -> assertThat(x + y + z).isEqualTo(10.7F) }
+    }
+
+    @Test
+    fun `find triple of sum double`() {
+        val numbers1 = listOf(1.0, 2.0, 3.0, 4.7, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0)
+        val triple1 = numbers1.findTripleOfSum(10.7)
+        triple1?.let { (x, y, z) -> assertThat(x + y + z).isEqualTo(10.7) }
+
+        val numbers2 = listOf(1.0, 2.0, 3.0, 4.7, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0)
+        val triple2 = numbers2.findTripleOfSum(10.7)
+        triple2?.let { (x, y, z) -> assertThat(x + y + z).isEqualTo(10.7) }
+    }
 }

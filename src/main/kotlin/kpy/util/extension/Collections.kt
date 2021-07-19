@@ -150,3 +150,243 @@ fun <T> Array<out T>.tail(n: Int = 10): List<T> {
     val length = this.size - n
     return this.drop(if (length < 0) 0 else length)
 }
+
+/**
+ * finds two numbers inside the [Iterable] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ...)
+ * x + y = sum
+ * ```
+ */
+fun Iterable<Int>.findPairOfSum(sum: Int): Pair<Int, Int>? {
+    val complements = associateBy { sum - it }
+    return firstNotNullOfOrNull { number ->
+        val complement = complements[number]
+        complement?.let { Pair(number, complement) }
+    }
+}
+
+/**
+ * finds two numbers inside the [Iterable] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ...)
+ * x + y = sum
+ * ```
+ */
+fun Iterable<Long>.findPairOfSum(sum: Long): Pair<Long, Long>? {
+    val complements = associateBy { sum - it }
+    return firstNotNullOfOrNull { number ->
+        val complement = complements[number]
+        complement?.let { Pair(number, complement) }
+    }
+}
+
+/**
+ * finds two numbers inside the [Iterable] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ...)
+ * x + y = sum
+ * ```
+ */
+fun Iterable<Float>.findPairOfSum(sum: Float): Pair<Float, Float>? {
+    val complements = associateBy { sum - it }
+    return firstNotNullOfOrNull { number ->
+        val complement = complements[number]
+        complement?.let { Pair(number, complement) }
+    }
+}
+
+/**
+ * finds two numbers inside the [Iterable] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ...)
+ * x + y = sum
+ * ```
+ */
+fun Iterable<Double>.findPairOfSum(sum: Double): Pair<Double, Double>? {
+    val complements = associateBy { sum - it }
+    return firstNotNullOfOrNull { number ->
+        val complement = complements[number]
+        complement?.let { Pair(number, complement) }
+    }
+}
+
+/**
+ * finds two numbers inside the [Array] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ...)
+ * x + y = sum
+ * ```
+ */
+fun Array<Int>.findPairOfSum(sum: Int): Pair<Int, Int>? {
+    val complements = associateBy { sum - it }
+    return firstNotNullOfOrNull { number ->
+        val complement = complements[number]
+        complement?.let { Pair(number, complement) }
+    }
+}
+
+/**
+ * finds two numbers inside the [Array] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ...)
+ * x + y = sum
+ * ```
+ */
+fun Array<Long>.findPairOfSum(sum: Long): Pair<Long, Long>? {
+    val complements = associateBy { sum - it }
+    return firstNotNullOfOrNull { number ->
+        val complement = complements[number]
+        complement?.let { Pair(number, complement) }
+    }
+}
+
+/**
+ * finds two numbers inside the [Array] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ...)
+ * x + y = sum
+ * ```
+ */
+fun Array<Float>.findPairOfSum(sum: Float): Pair<Float, Float>? {
+    val complements = associateBy { sum - it }
+    return firstNotNullOfOrNull { number ->
+        val complement = complements[number]
+        complement?.let { Pair(number, complement) }
+    }
+}
+
+/**
+ * finds two numbers inside the [Array] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ...)
+ * x + y = sum
+ * ```
+ */
+fun Array<Double>.findPairOfSum(sum: Double): Pair<Double, Double>? {
+    val complements = associateBy { sum - it }
+    return firstNotNullOfOrNull { number ->
+        val complement = complements[number]
+        complement?.let { Pair(number, complement) }
+    }
+}
+
+/**
+ * finds two numbers inside the [Array] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ...)
+ * x + y = sum
+ * ```
+ */
+fun Iterable<Int>.findTripleOfSum(sum: Int): Triple<Int, Int, Int>? {
+    return firstNotNullOfOrNull { x ->
+        // x -> (y, z) where y + z = sum - x
+        val pair = findPairOfSum(sum - x)
+        pair?.let { Triple(x, pair.first, pair.second) }
+    }
+}
+
+/**
+ * finds tree numbers inside the [Iterable] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ..., z)
+ * x + y + z = sum
+ * ```
+ */
+fun Iterable<Long>.findTripleOfSum(sum: Long): Triple<Long, Long, Long>? {
+    return firstNotNullOfOrNull { x ->
+        // x -> (y, z) where y + z = sum - x
+        val pair = findPairOfSum(sum - x)
+        pair?.let { Triple(x, pair.first, pair.second) }
+    }
+}
+
+/**
+ * finds tree numbers inside the [Iterable] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ..., z)
+ * x + y + z = sum
+ * ```
+ */
+fun Iterable<Float>.findTripleOfSum(sum: Float): Triple<Float, Float, Float>? {
+    return firstNotNullOfOrNull { x ->
+        // x -> (y, z) where y + z = sum - x
+        val pair = findPairOfSum(sum - x)
+        pair?.let { Triple(x, pair.first, pair.second) }
+    }
+}
+
+/**
+ * finds tree numbers inside the [Iterable] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ..., z)
+ * x + y + z = sum
+ * ```
+ */
+fun Iterable<Double>.findTripleOfSum(sum: Double): Triple<Double, Double, Double>? {
+    return firstNotNullOfOrNull { x ->
+        // x -> (y, z) where y + z = sum - x
+        val pair = findPairOfSum(sum - x)
+        pair?.let { Triple(x, pair.first, pair.second) }
+    }
+}
+
+/**
+ * finds tree numbers inside the [Array] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ..., z)
+ * x + y + z = sum
+ * ```
+ */
+fun Array<Int>.findTripleOfSum(sum: Int): Triple<Int, Int, Int>? {
+    return firstNotNullOfOrNull { x ->
+        // x -> (y, z) where y + z = sum - x
+        val pair = findPairOfSum(sum - x)
+        pair?.let { Triple(x, pair.first, pair.second) }
+    }
+}
+
+/**
+ * finds tree numbers inside the [Array] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ..., z)
+ * x + y + z = sum
+ * ```
+ */
+fun Array<Long>.findTripleOfSum(sum: Long): Triple<Long, Long, Long>? {
+    return firstNotNullOfOrNull { x ->
+        // x -> (y, z) where y + z = sum - x
+        val pair = findPairOfSum(sum - x)
+        pair?.let { Triple(x, pair.first, pair.second) }
+    }
+}
+
+/**
+ * finds tree numbers inside the [Array] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ..., z)
+ * x + y + z = sum
+ * ```
+ */
+fun Array<Float>.findTripleOfSum(sum: Float): Triple<Float, Float, Float>? {
+    return firstNotNullOfOrNull { x ->
+        // x -> (y, z) where y + z = sum - x
+        val pair = findPairOfSum(sum - x)
+        pair?.let { Triple(x, pair.first, pair.second) }
+    }
+}
+
+/**
+ * finds tree numbers inside the [Array] whose sum is equal to the [sum] variable
+ * ```
+ * list(..., x, ..., y, ..., z)
+ * x + y + z = sum
+ * ```
+ */
+fun Array<Double>.findTripleOfSum(sum: Double): Triple<Double, Double, Double>? {
+    return firstNotNullOfOrNull { x ->
+        // x -> (y, z) where y + z = sum - x
+        val pair = findPairOfSum(sum - x)
+        pair?.let { Triple(x, pair.first, pair.second) }
+    }
+}

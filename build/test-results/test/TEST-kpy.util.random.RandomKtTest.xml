@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.util.random.RandomKtTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-07-19T13:10:45" hostname="DESKTOP-247518Q" time="0.016">
+  <properties/>
+  <testcase name="choice list()" classname="kpy.util.random.RandomKtTest" time="0.014"/>
+  <testcase name="choice map()" classname="kpy.util.random.RandomKtTest" time="0.001"/>
+  <testcase name="choice set()" classname="kpy.util.random.RandomKtTest" time="0.0"/>
+  <testcase name="choice array()" classname="kpy.util.random.RandomKtTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
