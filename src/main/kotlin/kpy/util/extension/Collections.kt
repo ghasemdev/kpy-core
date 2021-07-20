@@ -2,9 +2,6 @@ package kpy.util.extension
 
 import java.util.*
 import kotlin.collections.ArrayDeque
-import kotlin.collections.ArrayList
-import kotlin.collections.HashSet
-import kotlin.collections.LinkedHashSet
 
 /*
 * Collection builders & extension methods
@@ -17,163 +14,109 @@ import kotlin.collections.LinkedHashSet
  * Return a integer Array from range
  * @see Array
  */
-fun arrayOf(range: IntRange): Array<Int> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) elements.toTypedArray() else emptyArray()
-}
+fun arrayOf(range: IntRange): Array<Int> = range.toList().toTypedArray()
 
 /**
  * Return a long Array from range
  * @see Array
  */
-fun arrayOf(range: LongRange): Array<Long> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) elements.toTypedArray() else emptyArray()
-}
+fun arrayOf(range: LongRange): Array<Long> = range.toList().toTypedArray()
 
 /**
  * Return a integer List from range
  * @see List
  */
-fun listOf(range: IntRange): List<Int> {
-    val elements = range.toList()
-    return elements.ifEmpty { emptyList() }
-}
+fun listOf(range: IntRange): List<Int> = range.toList()
 
 /**
  * Return a long List from range
  * @see List
  */
-fun listOf(range: LongRange): List<Long> {
-    val elements = range.toList()
-    return elements.ifEmpty { emptyList() }
-}
+fun listOf(range: LongRange): List<Long> = range.toList()
 
 /**
  * Return a integer MutableList from range
  * @see MutableList
  */
-fun mutableListOf(range: IntRange): MutableList<Int> {
-    val elements = range.toMutableList()
-    return elements.ifEmpty { mutableListOf() }
-}
+fun mutableListOf(range: IntRange): MutableList<Int> = range.toMutableList()
 
 /**
  * Return a long MutableList from range
  * @see MutableList
  */
-fun mutableListOf(range: LongRange): MutableList<Long> {
-    val elements = range.toMutableList()
-    return elements.ifEmpty { mutableListOf() }
-}
+fun mutableListOf(range: LongRange): MutableList<Long> = range.toMutableList()
 
 /**
  * Return a integer Set from range
  * @see Set
  */
-fun setOf(range: IntRange): Set<Int> {
-    val elements = range.toSet()
-    return elements.ifEmpty { emptySet() }
-}
+fun setOf(range: IntRange): Set<Int> = range.toSet()
 
 /**
  * Return a long Set from range
  * @see Set
  */
-fun setOf(range: LongRange): Set<Long> {
-    val elements = range.toSet()
-    return elements.ifEmpty { emptySet() }
-}
+fun setOf(range: LongRange): Set<Long> = range.toSet()
 
 /**
  * Return a integer MutableSet from range
  * @see MutableSet
  */
-fun mutableSetOf(range: IntRange): MutableSet<Int> {
-    val elements = range.toMutableSet()
-    return elements.ifEmpty { mutableSetOf() }
-}
+fun mutableSetOf(range: IntRange): MutableSet<Int> = range.toMutableSet()
 
 /**
  * Return a long MutableSet from range
  * @see MutableSet
  */
-fun mutableSetOf(range: LongRange): MutableSet<Long> {
-    val elements = range.toMutableSet()
-    return elements.ifEmpty { mutableSetOf() }
-}
+fun mutableSetOf(range: LongRange): MutableSet<Long> = range.toMutableSet()
 
 /**
  * Return a integer HashSet from range
  * @see HashSet
  */
-fun hashSetOf(range: IntRange): HashSet<Int> {
-    val elements = range.toHashSet()
-    return elements.ifEmpty { hashSetOf() }
-}
+fun hashSetOf(range: IntRange): HashSet<Int> = range.toHashSet()
 
 /**
  * Return a long HashSet from range
  * @see HashSet
  */
-fun hashSetOf(range: LongRange): HashSet<Long> {
-    val elements = range.toHashSet()
-    return elements.ifEmpty { hashSetOf() }
-}
+fun hashSetOf(range: LongRange): HashSet<Long> = range.toHashSet()
 
 /**
  * Return a integer LinkedHashSet from range
  * @see LinkedHashSet
  */
-fun linkedSetOf(range: IntRange): LinkedHashSet<Int> {
-    val elements = LinkedHashSet(range.toList())
-    return elements.ifEmpty { linkedSetOf() }
-}
+fun linkedSetOf(range: IntRange): LinkedHashSet<Int> = LinkedHashSet(range.toList())
 
 /**
  * Return a long LinkedHashSet from range
  * @see LinkedHashSet
  */
-fun linkedSetOf(range: LongRange): LinkedHashSet<Long> {
-    val elements = LinkedHashSet(range.toList())
-    return elements.ifEmpty { linkedSetOf() }
-}
+fun linkedSetOf(range: LongRange): LinkedHashSet<Long> = LinkedHashSet(range.toList())
 
 /**
  * Return a integer SortedSet from range
  * @see SortedSet
  */
-fun sortedSetOf(range: IntRange): SortedSet<Int> {
-    val elements = range.toSortedSet()
-    return elements.ifEmpty { sortedSetOf() }
-}
+fun sortedSetOf(range: IntRange): SortedSet<Int> = range.toSortedSet()
 
 /**
  * Return a long SortedSet from range
  * @see SortedSet
  */
-fun sortedSetOf(range: LongRange): SortedSet<Long> {
-    val elements = range.toSortedSet()
-    return elements.ifEmpty { sortedSetOf() }
-}
+fun sortedSetOf(range: LongRange): SortedSet<Long> = range.toSortedSet()
 
 /**
  * Return a integer ArrayList from range
  * @see ArrayList
  */
-fun arrayListOf(range: IntRange): ArrayList<Int> {
-    val elements = ArrayList(range.toList())
-    return elements.ifEmpty { arrayListOf() }
-}
+fun arrayListOf(range: IntRange): ArrayList<Int> = ArrayList(range.toList())
 
 /**
  * Return a long ArrayList from range
  * @see ArrayList
  */
-fun arrayListOf(range: LongRange): ArrayList<Long> {
-    val elements = ArrayList(range.toList())
-    return elements.ifEmpty { arrayListOf() }
-}
+fun arrayListOf(range: LongRange): ArrayList<Long> = ArrayList(range.toList())
 
 /**
  * Return a linked list from elements
@@ -186,19 +129,13 @@ fun <T> linkedListOf(vararg elements: T): LinkedList<T> =
  * Return a integer linked list from range
  * @see LinkedList
  */
-fun linkedListOf(range: IntRange): LinkedList<Int> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) LinkedList(elements) else LinkedList()
-}
+fun linkedListOf(range: IntRange): LinkedList<Int> = LinkedList(range.toList())
 
 /**
  * Return a long linked list from range
  * @see LinkedList
  */
-fun linkedListOf(range: LongRange): LinkedList<Long> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) LinkedList(elements) else LinkedList()
-}
+fun linkedListOf(range: LongRange): LinkedList<Long> = LinkedList(range.toList())
 
 /**
  * Return a empty linked list
@@ -216,19 +153,13 @@ fun <T> vectorOf(vararg elements: T): Vector<T> = if (elements.isNotEmpty()) Vec
  * Return a integer vector from range
  * @see Vector
  */
-fun vectorOf(range: IntRange): Vector<Int> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) Vector(elements) else Vector()
-}
+fun vectorOf(range: IntRange): Vector<Int> = Vector(range.toList())
 
 /**
  * Return a long vector from range
  * @see Vector
  */
-fun vectorOf(range: LongRange): Vector<Long> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) Vector(elements) else Vector()
-}
+fun vectorOf(range: LongRange): Vector<Long> = Vector(range.toList())
 
 /**
  * Return a empty vector
@@ -249,19 +180,13 @@ fun <T> stackOf(vararg elements: T): Stack<T> =
  * Return a integer stack from range
  * @see Stack
  */
-fun stackOf(range: IntRange): Stack<Int> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) Stack<Int>().also { it.addAll(elements) } else Stack()
-}
+fun stackOf(range: IntRange): Stack<Int> = Stack<Int>().also { it.addAll(range.toList()) }
 
 /**
  * Return a long stack from range
  * @see Stack
  */
-fun stackOf(range: LongRange): Stack<Long> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) Stack<Long>().also { it.addAll(elements) } else Stack()
-}
+fun stackOf(range: LongRange): Stack<Long> = Stack<Long>().also { it.addAll(range.toList()) }
 
 /**
  * Return a empty stack
@@ -280,19 +205,13 @@ fun <T> queueOf(vararg elements: T): Queue<T> =
  * Return a integer queue from range
  * @see Queue
  */
-fun queueOf(range: IntRange): Queue<Int> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) LinkedList(elements) else LinkedList()
-}
+fun queueOf(range: IntRange): Queue<Int> = LinkedList(range.toList())
 
 /**
  * Return a long queue from range
  * @see Queue
  */
-fun queueOf(range: LongRange): Queue<Long> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) LinkedList(elements) else LinkedList()
-}
+fun queueOf(range: LongRange): Queue<Long> = LinkedList(range.toList())
 
 /**
  * Return a empty queue
@@ -311,19 +230,13 @@ fun <T> priorityQueueOf(vararg elements: T): PriorityQueue<T> =
  * Return a integer priority queue from range
  * @see PriorityQueue
  */
-fun priorityQueueOf(range: IntRange): PriorityQueue<Int> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) PriorityQueue(elements) else PriorityQueue()
-}
+fun priorityQueueOf(range: IntRange): PriorityQueue<Int> = PriorityQueue(range.toList())
 
 /**
  * Return a long priority queue from range
  * @see PriorityQueue
  */
-fun priorityQueueOf(range: LongRange): PriorityQueue<Long> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) PriorityQueue(elements) else PriorityQueue()
-}
+fun priorityQueueOf(range: LongRange): PriorityQueue<Long> = PriorityQueue(range.toList())
 
 /**
  * Return a empty priority queue
@@ -344,19 +257,13 @@ fun <T> dequeOf(vararg elements: T): Deque<T> =
  * Return a integer doubly queue from range
  * @see Deque
  */
-fun dequeOf(range: IntRange): Deque<Int> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) LinkedList(elements) else LinkedList()
-}
+fun dequeOf(range: IntRange): Deque<Int> = LinkedList(range.toList())
 
 /**
  * Return a long doubly queue from range
  * @see Deque
  */
-fun dequeOf(range: LongRange): Deque<Long> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) LinkedList(elements) else LinkedList()
-}
+fun dequeOf(range: LongRange): Deque<Long> = LinkedList(range.toList())
 
 /**
  * Return a empty doubly queue
@@ -375,19 +282,13 @@ fun <T> arrayDequeOf(vararg elements: T): ArrayDeque<T> =
  * Return a integer array queue from range
  * @see ArrayDeque
  */
-fun arrayDequeOf(range: IntRange): ArrayDeque<Int> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) ArrayDeque(elements.toList()) else ArrayDeque()
-}
+fun arrayDequeOf(range: IntRange): ArrayDeque<Int> = ArrayDeque(range.toList())
 
 /**
  * Return a long array queue from range
  * @see ArrayDeque
  */
-fun arrayDequeOf(range: LongRange): ArrayDeque<Long> {
-    val elements = range.toList()
-    return if (elements.isNotEmpty()) ArrayDeque(elements.toList()) else ArrayDeque()
-}
+fun arrayDequeOf(range: LongRange): ArrayDeque<Long> = ArrayDeque(range.toList())
 
 /**
  * Return a empty array queue

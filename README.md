@@ -1,7 +1,7 @@
 # Kpy
 
 [![Release](https://img.shields.io/github/release/jakode2020/Kpy.svg?style=flat)](https://jitpack.io/#jakode2020/Kpy)
-[![Kotlin Version](https://img.shields.io/badge/kotlin-1.5.20-ff8a0d.svg)](https://kotlinlang.org)
+[![Kotlin Version](https://img.shields.io/badge/kotlin-1.5.21-ff8a0d.svg)](https://kotlinlang.org)
 
 Kpy is a Kotlin library that adds methods for easy programming
 
@@ -30,7 +30,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
