@@ -1,12 +1,13 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.21'
+    id 'org.jetbrains.kotlin.plugin.allopen' version "1.5.21"
     id 'application'
     id 'java-library'
     id 'java'
 }
 
-group ='com.github.jakode2020'
-version = '0.3.0'
+group = 'com.github.jakode2020'
+version = '0.3.0-build2'
 
 repositories {
     mavenCentral()
@@ -50,4 +51,8 @@ task sourcesJar(type: Jar, dependsOn: classes) {
 task javadocJar(type: Jar, dependsOn: javadoc) {
     archiveClassifier.set("javadoc")
     from javadoc.destinationDir
+}
+
+allOpen {
+    annotation("kpy.util.annotations.Mockable")
 }
