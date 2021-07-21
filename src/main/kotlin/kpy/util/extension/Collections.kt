@@ -7,7 +7,7 @@ import kotlin.collections.ArrayDeque
 * Collection builders & extension methods
 *
 * @author jakode
-* @since v3.0.0 07/19/2021
+* @since v3.0.1 07/19/2021
 */
 
 /**
