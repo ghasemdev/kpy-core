@@ -5,7 +5,6 @@ package kpy.struct
  * + Success : return data and status
  * + Error   : throw exception
  * + Loading : loading and not coming
- *
  * @author jakode2020
  * @since v1.0.0 7/13/2021
  */

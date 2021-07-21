@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.util.extension.OperationsKtTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-07-21T20:10:44" hostname="DESKTOP-247518Q" time="0.006">
+  <properties/>
+  <testcase name="boolean nor()" classname="kpy.util.extension.OperationsKtTest" time="0.001"/>
+  <testcase name="String times()" classname="kpy.util.extension.OperationsKtTest" time="0.001"/>
+  <testcase name="boolean nand()" classname="kpy.util.extension.OperationsKtTest" time="0.0"/>
+  <testcase name="boolean xnor()" classname="kpy.util.extension.OperationsKtTest" time="0.0"/>
+  <testcase name="nor()" classname="kpy.util.extension.OperationsKtTest" time="0.001"/>
+  <testcase name="not()" classname="kpy.util.extension.OperationsKtTest" time="0.0"/>
+  <testcase name="nand()" classname="kpy.util.extension.OperationsKtTest" time="0.0"/>
+  <testcase name="xnor()" classname="kpy.util.extension.OperationsKtTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

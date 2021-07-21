@@ -165,7 +165,7 @@ fun readLongArray(n: Int) = LongArray(n) { read().toLong() }
  * @see System.getProperty
  * @see properties
  */
-fun property(key: String, default: String? = "null"): String = System.getProperty(key, default)
+fun property(key: String, default: String? = null): String = System.getProperty(key, default)
 
 /**
  * Determines the current system properties. First, if there is a security manager,
@@ -176,17 +176,13 @@ fun property(key: String, default: String? = "null"): String = System.getPropert
 fun properties(): Properties = System.getProperties()
 
 /**
- * Gets the value of the specified environment variable, When the key is invalid return "null". An
+ * Gets the value of the specified environment variable, When the key is invalid return null. An
  * environment variable is a system-dependent external named
  * value.
  * @see System.getenv
  * @see environments
  */
-fun environment(name: String): String = try {
-    System.getenv(name)
-} catch (e: Exception) {
-    "null"
-}
+fun environment(name: String): String = System.getenv(name)
 
 /**
  * Returns an unmodifiable string map view of the current system environment.

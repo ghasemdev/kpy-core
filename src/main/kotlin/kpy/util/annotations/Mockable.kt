@@ -2,7 +2,7 @@ package kpy.util.annotations
 
 /**
  * ### Mockable annotate make classes open for inheritance or mock testing
- * * configuration in build.gradle
+ * configuration in build.gradle
  * ```
  * plugins {
  *  ...

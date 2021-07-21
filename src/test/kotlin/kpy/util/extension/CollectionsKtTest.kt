@@ -368,4 +368,22 @@ class CollectionsKtTest {
         val triple2 = numbers2.findTripleOfSum(10.7)
         triple2?.let { (x, y, z) -> assertThat(x + y + z).isEqualTo(10.7) }
     }
+
+    @Test
+    fun `refresh list`() {
+        val arrayList = arrayListOf(1..10)
+        assertThat(arrayList.refreshList(listOf(20..30))).isEqualTo(listOf(20..30))
+
+        val mutableList = mutableListOf(1..10)
+        assertThat(mutableList.refreshList(listOf(20..30))).isEqualTo(listOf(20..30))
+    }
+
+    @Test
+    fun `add new items`() {
+        val arrayList = arrayListOf(1..10)
+        assertThat(arrayList.addNewItems(listOf(11..30))).isEqualTo(listOf(1..30))
+
+        val mutableList = mutableListOf(1..10)
+        assertThat(mutableList.addNewItems(listOf(11..30))).isEqualTo(listOf(1..30))
+    }
 }

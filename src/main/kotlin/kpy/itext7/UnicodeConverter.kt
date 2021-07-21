@@ -9,7 +9,7 @@ import kpy.util.extension.isPersianNumber
  * # Unicode Converter
  * Convert text to persian unicode
  * @author Jakode
- * @since v1.0.0 03/24/2021
+ * @since v1.1.0 07/21/2021
  */
 object UnicodeConverter {
 
@@ -27,14 +27,14 @@ object UnicodeConverter {
         val sentence = text.split(" ")
         return buildString {
             for (word in sentence) {
-                if (isEnglish(word)) {
+                if (word.isEnglish()) {
                     val reversedWord = word.reversed()
-                    if (isNumber(reversedWord)) {
+                    if (reversedWord.isNumber()) {
                         append(toPersianNumber(reversedWord))
                     } else {
                         append(reversedWord)
                     }
-                } else if (isPersianNumber(word)) {
+                } else if (word.isPersianNumber()) {
                     append(word.reversed())
                 } else {
                     append(toUnicode(word))

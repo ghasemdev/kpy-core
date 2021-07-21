@@ -1,7 +1,7 @@
 package kpy.util.log
 
+import kpy.util.extension.dateTimeFormatter
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
 /**
  * ## Logging massage in console
@@ -9,25 +9,23 @@ import java.time.format.DateTimeFormatter
  * for debug coroutines set `(-Dkotlinx.coroutines.debug)` to VM Option
  *
  * @author jakode
- * @since v1.0.0 07/17/2021
+ * @since v1.1.0 07/21/2021
  */
 object Log {
-    private val dateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy-HH:mm:SS")
-
     /** log INFO massage with time, current thread and tag */
-    fun i(massage: String, tag: String? = null) {
+    fun i(massage: Any, tag: String? = null) {
         val (now, thread, _tag) = logInit(tag)
         println(ConsoleColors.CYAN + "[$now] [$thread] INFO$_tag $massage" + ConsoleColors.RESET)
     }
 
     /** log DEBUG massage with time, current thread and tag */
-    fun d(massage: String, tag: String? = null) {
+    fun d(massage: Any, tag: String? = null) {
         val (now, thread, _tag) = logInit(tag)
         println(ConsoleColors.PURPLE + "[$now] [$thread] DEBUG$_tag $massage" + ConsoleColors.RESET)
     }
 
     /** log WARN massage with time, current thread and tag */
-    fun w(massage: String, tag: String? = null) {
+    fun w(massage: Any, tag: String? = null) {
         val (now, thread, _tag) = logInit(tag)
         println(ConsoleColors.YELLOW + "[$now] [$thread] WARN$_tag $massage" + ConsoleColors.RESET)
     }
@@ -39,7 +37,7 @@ object Log {
     }
 
     private fun logInit(tag: String?): Triple<String, String, String> {
-        val now = LocalDateTime.now().format(dateFormat)
+        val now = LocalDateTime.now().format(dateTimeFormatter)
         val thread = Thread.currentThread().name
         val _tag = tag?.let { "/$it" } ?: ""
         return Triple(now, thread, _tag)

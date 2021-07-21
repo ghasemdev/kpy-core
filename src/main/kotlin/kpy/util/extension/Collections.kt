@@ -7,7 +7,7 @@ import kotlin.collections.ArrayDeque
 * Collection builders & extension methods
 *
 * @author jakode
-* @since v3.0.1 07/19/2021
+* @since v3.1.0 07/22/2021
 */
 
 /**
@@ -581,4 +581,46 @@ fun Array<Double>.findTripleOfSum(sum: Double): Triple<Double, Double, Double>? 
         val pair = findPairOfSum(sum - x)
         pair?.let { Triple(x, pair.first, pair.second) }
     }
+}
+
+/**
+ * Refresh a list with clearing and add items
+ * @param items
+ * @return array list
+ */
+fun <T> MutableList<T>.refreshList(items: List<T>): MutableList<T> {
+    this.clear()
+    this.addAll(items)
+    return this
+}
+
+/**
+ * Refresh a list with clearing and add items
+ * @param items
+ * @return array list
+ */
+fun <T> ArrayList<T>.refreshList(items: List<T>): ArrayList<T> {
+    this.clear()
+    this.addAll(items)
+    return this
+}
+
+/**
+ * Add new items to list
+ * @param items
+ * @return array list
+ */
+fun <T> MutableList<T>.addNewItems(items: List<T>): MutableList<T> {
+    items.forEach { if (!this.contains(it)) this.add(it) }
+    return this
+}
+
+/**
+ * Add new items to list
+ * @param items
+ * @return array list
+ */
+fun <T> ArrayList<T>.addNewItems(items: List<T>): ArrayList<T> {
+    items.forEach { if (!this.contains(it)) this.add(it) }
+    return this
 }

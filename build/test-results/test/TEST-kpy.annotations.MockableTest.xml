@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kpy.annotations.MockableTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-21T16:26:35" hostname="DESKTOP-247518Q" time="0.035">
+<testsuite name="kpy.annotations.MockableTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-21T20:10:43" hostname="DESKTOP-247518Q" time="0.022">
   <properties/>
-  <testcase name="TA extended Student()" classname="kpy.annotations.MockableTest" time="0.035"/>
+  <testcase name="TA extended Student()" classname="kpy.annotations.MockableTest" time="0.022"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
