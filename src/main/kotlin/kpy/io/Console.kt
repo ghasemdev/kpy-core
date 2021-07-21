@@ -165,7 +165,7 @@ fun readLongArray(n: Int) = LongArray(n) { read().toLong() }
  * @see System.getProperty
  * @see properties
  */
-fun property(key: String, default: String? = null): String = System.getProperty(key, default)
+fun property(key: String, default: String? = null): String? = System.getProperty(key, default)
 
 /**
  * Determines the current system properties. First, if there is a security manager,
@@ -182,7 +182,7 @@ fun properties(): Properties = System.getProperties()
  * @see System.getenv
  * @see environments
  */
-fun environment(name: String): String = System.getenv(name)
+fun environment(name: String): String? = System.getenv(name)
 
 /**
  * Returns an unmodifiable string map view of the current system environment.
