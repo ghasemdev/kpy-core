@@ -1,19 +1,23 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.21'
     id 'org.jetbrains.kotlin.plugin.allopen' version "1.5.21"
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.21'
     id 'application'
     id 'java-library'
     id 'java'
 }
 
 group = 'com.github.jakode2020'
-version = '0.5.0'
+version = '0.5.0-build2'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    // Serialization Json
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1'
+
     // Junit5
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'

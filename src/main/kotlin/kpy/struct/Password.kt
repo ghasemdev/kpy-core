@@ -1,5 +1,6 @@
 package kpy.struct
 
+import kotlinx.serialization.Serializable
 import kotlin.properties.Delegates
 
 /**
@@ -20,6 +21,7 @@ import kotlin.properties.Delegates
  * @author jakode2020
  * @since v1.0.0 7/22/2021
  */
+@Serializable
 open class Password {
     private lateinit var lengthValidation: (Boolean) -> Unit
     private lateinit var digitValidation: (Boolean) -> Unit
