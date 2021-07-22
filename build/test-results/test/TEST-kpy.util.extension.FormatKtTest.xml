@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kpy.util.extension.FormatKtTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-21T20:10:44" hostname="DESKTOP-247518Q" time="0.004">
-  <properties/>
-  <testcase name="remove decimal part()" classname="kpy.util.extension.FormatKtTest" time="0.002"/>
-  <testcase name="separate number with pattern()" classname="kpy.util.extension.FormatKtTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
