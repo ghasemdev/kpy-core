@@ -1,4 +1,4 @@
-package kpy.util.crypto
+package kpy.util.security
 
 import com.google.common.truth.Truth.assertThat
 import kpy.util.extension.*

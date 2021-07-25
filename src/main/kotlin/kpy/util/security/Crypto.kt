@@ -1,4 +1,4 @@
-package kpy.util.crypto
+package kpy.util.security
 
 import java.security.SecureRandom
 import java.util.*
