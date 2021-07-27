@@ -1,4 +1,4 @@
-package kpy.struct
+package kpy.struct.validation
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test

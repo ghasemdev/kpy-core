@@ -1,4 +1,4 @@
-package kpy.struct
+package kpy.struct.validation
 
 import kotlinx.serialization.Serializable
 
@@ -11,5 +11,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 value class Phone(val value: String) : Validation {
     /** check is a phone number*/
-    override fun isValid() = value.isNotEmpty() && value.matches(Regex("09\\d{9}|\\+989\\d{9}"))
+    override fun isValid() = value.isNotEmpty() && value.matches(Regex("""09\d{9}|\+989\d{9}"""))
 }

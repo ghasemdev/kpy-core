@@ -1,4 +1,4 @@
-package kpy.struct
+package kpy.struct.validation
 
 import kotlinx.serialization.Serializable
 
@@ -11,5 +11,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 value class Email(val value: String) : Validation {
     /** check is a valid email*/
-    override fun isValid() = value.isNotEmpty() && value.matches(Regex("^[a-zA-Z0-9_!#\$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+\$"))
+    override fun isValid() = value.isNotEmpty() && value.matches(Regex("""^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$"""))
 }

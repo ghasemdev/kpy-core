@@ -1,4 +1,4 @@
-package kpy.struct
+package kpy.struct.validation
 
 import kotlinx.serialization.Serializable
 import kotlin.properties.Delegates
@@ -41,11 +41,11 @@ open class Password {
     }
 
     private fun checkLength(password: String, length: Int): Boolean = password.length >= length
-    protected open fun checkDigit(password: String): Boolean = password.contains(Regex("(?=.*[0-9])"))
-    protected open fun checkLowerCase(password: String): Boolean = password.contains(Regex("(?=.*[a-z])"))
-    protected open fun checkUpperCase(password: String): Boolean = password.contains(Regex("(?=.*[A-Z])"))
-    protected open fun checkSpecialChar(password: String): Boolean = password.contains(Regex("(?=.*[@#\$%^&+=])"))
-    protected open fun checkWhitespace(password: String): Boolean = !password.contains(Regex("(?=\\s+)"))
+    protected open fun checkDigit(password: String): Boolean = password.contains(Regex("""(?=.*[0-9])"""))
+    protected open fun checkLowerCase(password: String): Boolean = password.contains(Regex("""(?=.*[a-z])"""))
+    protected open fun checkUpperCase(password: String): Boolean = password.contains(Regex("""(?=.*[A-Z])"""))
+    protected open fun checkSpecialChar(password: String): Boolean = password.contains(Regex("""(?=.*[@#$%^&+=])"""))
+    protected open fun checkWhitespace(password: String): Boolean = !password.contains(Regex("""(?=\s+)"""))
 
     class Builder(initialize: Builder.() -> Unit) {
         private lateinit var lengthHolder: (Boolean) -> Unit
