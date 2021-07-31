@@ -1,4 +1,4 @@
-# Kpy
+# Kpy <img src="kpy.png" alt="kpy logo" style="width:50px;height:50px;">
 
 [![Release](https://img.shields.io/github/release/jakode2020/Kpy.svg?style=flat)](https://jitpack.io/#jakode2020/Kpy)
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.5.21-ff8a0d.svg)](https://kotlinlang.org)
