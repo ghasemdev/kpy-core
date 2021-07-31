@@ -9,7 +9,7 @@ class ConditionsKtTest {
     fun ifNull() {
         val value: String? = null
         val result = value.ifNull {
-            print("$value : is null")
+            print("$it : is null")
         }
         assertThat(result).isEqualTo(Unit)
 

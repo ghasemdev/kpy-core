@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.github.jakode2020'
-version = '0.5.0-build5'
+version = '0.5.0-build6'
 
 repositories {
     mavenCentral()
