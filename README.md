@@ -1,4 +1,9 @@
-# Kpy <img src="kpy.png" alt="kpy logo" style="width:50px;height:50px;">
+<div align='center'>
+    <img src="kpy.png" alt="kpy logo" width="400" height="400">
+</div>
+
+
+# What is Kpy ?
 
 [![Release](https://img.shields.io/github/release/jakode2020/Kpy.svg?style=flat)](https://jitpack.io/#jakode2020/Kpy)
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.5.21-ff8a0d.svg)](https://kotlinlang.org)
