@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.github.jakode2020'
-version = '0.5.0-build4'
+version = '0.5.0-build5'
 
 repositories {
     mavenCentral()
@@ -16,13 +16,13 @@ repositories {
 
 dependencies {
     // Serialization Json
-    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2'
 
     // Junit5
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
     testCompileOnly 'junit:junit:4.13.2'
-    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.7.2'
 
     // Assertions
     testImplementation 'com.google.truth:truth:1.1.3'

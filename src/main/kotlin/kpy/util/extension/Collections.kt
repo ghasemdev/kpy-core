@@ -11,7 +11,7 @@ import kotlin.collections.ArrayDeque
 */
 
 /**
- * Return a integer Array from range
+ * Return an integer Array from range
  * @see Array
  */
 fun arrayOf(range: IntRange): Array<Int> = range.toList().toTypedArray()
@@ -23,7 +23,7 @@ fun arrayOf(range: IntRange): Array<Int> = range.toList().toTypedArray()
 fun arrayOf(range: LongRange): Array<Long> = range.toList().toTypedArray()
 
 /**
- * Return a integer List from range
+ * Return an integer List from range
  * @see List
  */
 fun listOf(range: IntRange): List<Int> = range.toList()
@@ -35,7 +35,7 @@ fun listOf(range: IntRange): List<Int> = range.toList()
 fun listOf(range: LongRange): List<Long> = range.toList()
 
 /**
- * Return a integer MutableList from range
+ * Return an integer MutableList from range
  * @see MutableList
  */
 fun mutableListOf(range: IntRange): MutableList<Int> = range.toMutableList()
@@ -47,7 +47,7 @@ fun mutableListOf(range: IntRange): MutableList<Int> = range.toMutableList()
 fun mutableListOf(range: LongRange): MutableList<Long> = range.toMutableList()
 
 /**
- * Return a integer Set from range
+ * Return an integer Set from range
  * @see Set
  */
 fun setOf(range: IntRange): Set<Int> = range.toSet()
@@ -59,7 +59,7 @@ fun setOf(range: IntRange): Set<Int> = range.toSet()
 fun setOf(range: LongRange): Set<Long> = range.toSet()
 
 /**
- * Return a integer MutableSet from range
+ * Return an integer MutableSet from range
  * @see MutableSet
  */
 fun mutableSetOf(range: IntRange): MutableSet<Int> = range.toMutableSet()
@@ -71,7 +71,7 @@ fun mutableSetOf(range: IntRange): MutableSet<Int> = range.toMutableSet()
 fun mutableSetOf(range: LongRange): MutableSet<Long> = range.toMutableSet()
 
 /**
- * Return a integer HashSet from range
+ * Return an integer HashSet from range
  * @see HashSet
  */
 fun hashSetOf(range: IntRange): HashSet<Int> = range.toHashSet()
@@ -83,7 +83,7 @@ fun hashSetOf(range: IntRange): HashSet<Int> = range.toHashSet()
 fun hashSetOf(range: LongRange): HashSet<Long> = range.toHashSet()
 
 /**
- * Return a integer LinkedHashSet from range
+ * Return an integer LinkedHashSet from range
  * @see LinkedHashSet
  */
 fun linkedSetOf(range: IntRange): LinkedHashSet<Int> = LinkedHashSet(range.toList())
@@ -95,7 +95,7 @@ fun linkedSetOf(range: IntRange): LinkedHashSet<Int> = LinkedHashSet(range.toLis
 fun linkedSetOf(range: LongRange): LinkedHashSet<Long> = LinkedHashSet(range.toList())
 
 /**
- * Return a integer SortedSet from range
+ * Return an integer SortedSet from range
  * @see SortedSet
  */
 fun sortedSetOf(range: IntRange): SortedSet<Int> = range.toSortedSet()
@@ -107,7 +107,7 @@ fun sortedSetOf(range: IntRange): SortedSet<Int> = range.toSortedSet()
 fun sortedSetOf(range: LongRange): SortedSet<Long> = range.toSortedSet()
 
 /**
- * Return a integer ArrayList from range
+ * Return an integer ArrayList from range
  * @see ArrayList
  */
 fun arrayListOf(range: IntRange): ArrayList<Int> = ArrayList(range.toList())
@@ -126,7 +126,7 @@ fun <T> linkedListOf(vararg elements: T): LinkedList<T> =
     if (elements.isNotEmpty()) LinkedList(elements.toList()) else LinkedList()
 
 /**
- * Return a integer linked list from range
+ * Return an integer linked list from range
  * @see LinkedList
  */
 fun linkedListOf(range: IntRange): LinkedList<Int> = LinkedList(range.toList())
@@ -138,7 +138,7 @@ fun linkedListOf(range: IntRange): LinkedList<Int> = LinkedList(range.toList())
 fun linkedListOf(range: LongRange): LinkedList<Long> = LinkedList(range.toList())
 
 /**
- * Return a empty linked list
+ * Return an empty linked list
  * @see LinkedList
  */
 fun <T> linkedListOf(): LinkedList<T> = LinkedList()
@@ -150,7 +150,7 @@ fun <T> linkedListOf(): LinkedList<T> = LinkedList()
 fun <T> vectorOf(vararg elements: T): Vector<T> = if (elements.isNotEmpty()) Vector(elements.toList()) else Vector()
 
 /**
- * Return a integer vector from range
+ * Return an integer vector from range
  * @see Vector
  */
 fun vectorOf(range: IntRange): Vector<Int> = Vector(range.toList())
@@ -162,7 +162,7 @@ fun vectorOf(range: IntRange): Vector<Int> = Vector(range.toList())
 fun vectorOf(range: LongRange): Vector<Long> = Vector(range.toList())
 
 /**
- * Return a empty vector
+ * Return an empty vector
  * @see Vector
  * @param size default size is 10
  * @param incrementStep default step to increment size is zero
@@ -177,7 +177,7 @@ fun <T> stackOf(vararg elements: T): Stack<T> =
     if (elements.isNotEmpty()) Stack<T>().also { it.addAll(elements.toList()) } else Stack()
 
 /**
- * Return a integer stack from range
+ * Return an integer stack from range
  * @see Stack
  */
 fun stackOf(range: IntRange): Stack<Int> = Stack<Int>().also { it.addAll(range.toList()) }
@@ -189,7 +189,7 @@ fun stackOf(range: IntRange): Stack<Int> = Stack<Int>().also { it.addAll(range.t
 fun stackOf(range: LongRange): Stack<Long> = Stack<Long>().also { it.addAll(range.toList()) }
 
 /**
- * Return a empty stack
+ * Return an empty stack
  * @see Stack
  */
 fun <T> stackOf(): Stack<T> = Stack()
@@ -202,7 +202,7 @@ fun <T> queueOf(vararg elements: T): Queue<T> =
     if (elements.isNotEmpty()) LinkedList(elements.toList()) else LinkedList()
 
 /**
- * Return a integer queue from range
+ * Return an integer queue from range
  * @see Queue
  */
 fun queueOf(range: IntRange): Queue<Int> = LinkedList(range.toList())
@@ -214,7 +214,7 @@ fun queueOf(range: IntRange): Queue<Int> = LinkedList(range.toList())
 fun queueOf(range: LongRange): Queue<Long> = LinkedList(range.toList())
 
 /**
- * Return a empty queue
+ * Return an empty queue
  * @see Queue
  */
 fun <T> queueOf(): Queue<T> = LinkedList()
@@ -227,7 +227,7 @@ fun <T> priorityQueueOf(vararg elements: T): PriorityQueue<T> =
     if (elements.isNotEmpty()) PriorityQueue(elements.toList()) else PriorityQueue()
 
 /**
- * Return a integer priority queue from range
+ * Return an integer priority queue from range
  * @see PriorityQueue
  */
 fun priorityQueueOf(range: IntRange): PriorityQueue<Int> = PriorityQueue(range.toList())
@@ -239,7 +239,7 @@ fun priorityQueueOf(range: IntRange): PriorityQueue<Int> = PriorityQueue(range.t
 fun priorityQueueOf(range: LongRange): PriorityQueue<Long> = PriorityQueue(range.toList())
 
 /**
- * Return a empty priority queue
+ * Return an empty priority queue
  * @see PriorityQueue
  * @param comparator initiate queue order
  */
@@ -254,7 +254,7 @@ fun <T> dequeOf(vararg elements: T): Deque<T> =
     if (elements.isNotEmpty()) LinkedList(elements.toList()) else LinkedList()
 
 /**
- * Return a integer doubly queue from range
+ * Return an integer doubly queue from range
  * @see Deque
  */
 fun dequeOf(range: IntRange): Deque<Int> = LinkedList(range.toList())
@@ -266,20 +266,20 @@ fun dequeOf(range: IntRange): Deque<Int> = LinkedList(range.toList())
 fun dequeOf(range: LongRange): Deque<Long> = LinkedList(range.toList())
 
 /**
- * Return a empty doubly queue
+ * Return an empty doubly queue
  * @see Deque
  */
 fun <T> dequeOf(): Deque<T> = LinkedList()
 
 /**
- * Return a array queue from elements
+ * Return an array queue from elements
  * @see ArrayDeque
  */
 fun <T> arrayDequeOf(vararg elements: T): ArrayDeque<T> =
     if (elements.isNotEmpty()) ArrayDeque(elements.toList()) else ArrayDeque()
 
 /**
- * Return a integer array queue from range
+ * Return an integer array queue from range
  * @see ArrayDeque
  */
 fun arrayDequeOf(range: IntRange): ArrayDeque<Int> = ArrayDeque(range.toList())
@@ -291,7 +291,7 @@ fun arrayDequeOf(range: IntRange): ArrayDeque<Int> = ArrayDeque(range.toList())
 fun arrayDequeOf(range: LongRange): ArrayDeque<Long> = ArrayDeque(range.toList())
 
 /**
- * Return a empty array queue
+ * Return an empty array queue
  * @see ArrayDeque
  */
 fun <T> arrayDequeOf(): ArrayDeque<T> = ArrayDeque()
@@ -304,7 +304,7 @@ fun <T, K> hashTableOf(vararg elements: Pair<T, K>): Hashtable<T, K> =
     if (elements.isNotEmpty()) Hashtable(elements.toMap()) else Hashtable()
 
 /**
- * Return a empty hash table
+ * Return an empty hash table
  * @see Hashtable
  */
 fun <T, K> hashTableOf(): Hashtable<T, K> = Hashtable()

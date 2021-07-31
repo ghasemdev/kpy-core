@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kpy.struct.pool.DefaultPoolTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-27T15:18:30" hostname="DESKTOP-247518Q" time="0.033">
+<testsuite name="kpy.struct.pool.DefaultPoolTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-31T09:25:33" hostname="DESKTOP-247518Q" time="0.054">
   <properties/>
-  <testcase name="pool()" classname="kpy.struct.pool.DefaultPoolTest" time="0.033"/>
+  <testcase name="pool()" classname="kpy.struct.pool.DefaultPoolTest" time="0.054"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

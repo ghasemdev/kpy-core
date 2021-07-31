@@ -16,9 +16,7 @@ package kpy.util.extension
  *      output: 1010101010
  * ```
  */
-operator fun String.times(repeat: Int): String {
-    return buildString { repeat(repeat) { append(this@times) } }
-}
+operator fun String.times(repeat: Int) = this.repeat(repeat)
 
 /** not or */
 infix fun Boolean.nor(other: Boolean) = !(this or other)
