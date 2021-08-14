@@ -4,7 +4,7 @@ package kpy.util.extension
 * Logical Operations
 *
 * @author jakode
-* @since v1.0.0 07/12/2021
+* @since v2.0.0 08/14/2021
 */
 
 /**
@@ -17,6 +17,17 @@ package kpy.util.extension
  * ```
  */
 operator fun String.times(repeat: Int) = this.repeat(repeat)
+
+/**
+ * Repeats a character to the number of repetitions
+ *
+ * Example:
+ * ```
+ *      println('0' * 5)
+ *      output: 00000
+ * ```
+ */
+operator fun Char.times(repeat: Int) = this.toString() * repeat
 
 /** not or */
 infix fun Boolean.nor(other: Boolean) = !(this or other)

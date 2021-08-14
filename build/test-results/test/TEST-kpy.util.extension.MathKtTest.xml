@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.util.extension.MathKtTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-08-14T10:38:21" hostname="DESKTOP-GB548BL" time="0.004">
+  <properties/>
+  <testcase name="isEven()" classname="kpy.util.extension.MathKtTest" time="0.001"/>
+  <testcase name="toRadians()" classname="kpy.util.extension.MathKtTest" time="0.001"/>
+  <testcase name="toDegrees()" classname="kpy.util.extension.MathKtTest" time="0.0"/>
+  <testcase name="isOdd()" classname="kpy.util.extension.MathKtTest" time="0.0"/>
+  <testcase name="round()" classname="kpy.util.extension.MathKtTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

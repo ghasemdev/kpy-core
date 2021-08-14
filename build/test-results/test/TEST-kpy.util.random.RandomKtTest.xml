@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.util.random.RandomKtTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-08-14T10:38:21" hostname="DESKTOP-GB548BL" time="0.015">
+  <properties/>
+  <testcase name="choice list()" classname="kpy.util.random.RandomKtTest" time="0.007"/>
+  <testcase name="choices set()" classname="kpy.util.random.RandomKtTest" time="0.003"/>
+  <testcase name="choices list()" classname="kpy.util.random.RandomKtTest" time="0.001"/>
+  <testcase name="choice map()" classname="kpy.util.random.RandomKtTest" time="0.0"/>
+  <testcase name="choice set()" classname="kpy.util.random.RandomKtTest" time="0.0"/>
+  <testcase name="choices array()" classname="kpy.util.random.RandomKtTest" time="0.001"/>
+  <testcase name="choice array()" classname="kpy.util.random.RandomKtTest" time="0.0"/>
+  <system-out><![CDATA[?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 1 -> 2?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 2 -> 0?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 3 -> 3?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 4 -> 0?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 5 -> 0?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 1 -> 4?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 2 -> 1?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 3 -> 4?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 4 -> 0?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 5 -> 1?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 1 -> 0?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 2 -> 3?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 3 -> 2?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 4 -> 1?[0m
+?[0;36m[14/08/2021-15:08:21] [Test worker] INFO/CHOICES_ARRAY 5 -> 14?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
