@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.github.jakode2020'
-version = '0.6.0'
+version = '0.7.0'
 
 repositories {
     mavenCentral()
@@ -17,6 +17,11 @@ repositories {
 dependencies {
     // Serialization Json
     implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2'
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1-native-mt'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1-native-mt'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1-native-mt'
 
     // Junit5
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
