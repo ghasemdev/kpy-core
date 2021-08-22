@@ -19,7 +19,7 @@ class CryptoTest {
     fun `generate otp without character`() {
         val otp = crypto.generateOtp()
 
-        assertThat(otp.isNumber()).isTrue()
+        assertThat(otp.isDigit).isTrue()
         assertThat(otp.length).isEqualTo(5)
         Log.i(otp, "generate otp with out character:")
     }
@@ -29,7 +29,7 @@ class CryptoTest {
     fun `generate otp`() {
         val otp = crypto.generateOtp(length = 6, isCharacterEnabled = true)
 
-        assertThat(otp.isEnglish()).isTrue()
+        assertThat(otp.isAlphanumeric).isTrue()
         assertThat(otp.length).isEqualTo(6)
         Log.i(otp, "generate otp:")
     }
@@ -39,7 +39,7 @@ class CryptoTest {
     fun `generate password without symbols`() {
         val otp = crypto.generatePassword(isSymbolsEnabled = false)
 
-        assertThat(otp.isEnglish()).isTrue()
+        assertThat(otp.isAlphanumeric).isTrue()
         assertThat(otp.length).isEqualTo(8)
         Log.i(otp, "generate password with out symbols:")
     }

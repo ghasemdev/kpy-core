@@ -1,9 +1,9 @@
 package kpy.itext7
 
 import kpy.util.extension.appendSpace
-import kpy.util.extension.isEnglish
-import kpy.util.extension.isNumber
-import kpy.util.extension.isPersianNumber
+import kpy.util.extension.isAlphanumeric
+import kpy.util.extension.isDigit
+import kpy.util.extension.isPersianDigit
 
 /**
  * # Unicode Converter
@@ -27,14 +27,14 @@ object UnicodeConverter {
         val sentence = text.split(" ")
         return buildString {
             for (word in sentence) {
-                if (word.isEnglish()) {
+                if (word.isAlphanumeric) {
                     val reversedWord = word.reversed()
-                    if (reversedWord.isNumber()) {
+                    if (reversedWord.isDigit) {
                         append(toPersianNumber(reversedWord))
                     } else {
                         append(reversedWord)
                     }
-                } else if (word.isPersianNumber()) {
+                } else if (word.isPersianDigit) {
                     append(word.reversed())
                 } else {
                     append(toUnicode(word))

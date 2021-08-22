@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kpy.util.extension.StringsKtTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-14T10:38:21" hostname="DESKTOP-GB548BL" time="0.003">
+<testsuite name="kpy.util.extension.StringsKtTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-08-22T20:52:14" hostname="DESKTOP-GB548BL" time="0.043">
   <properties/>
-  <testcase name="appendSpace()" classname="kpy.util.extension.StringsKtTest" time="0.001"/>
-  <testcase name="isNumber()" classname="kpy.util.extension.StringsKtTest" time="0.001"/>
-  <testcase name="isPersianNumber()" classname="kpy.util.extension.StringsKtTest" time="0.0"/>
-  <testcase name="isEnglish()" classname="kpy.util.extension.StringsKtTest" time="0.0"/>
+  <testcase name="containsDigit()" classname="kpy.util.extension.StringsKtTest" time="0.024"/>
+  <testcase name="isAlphanumeric()" classname="kpy.util.extension.StringsKtTest" time="0.001"/>
+  <testcase name="appendSpace()" classname="kpy.util.extension.StringsKtTest" time="0.002"/>
+  <testcase name="hasLettersAndDigits()" classname="kpy.util.extension.StringsKtTest" time="0.001"/>
+  <testcase name="isPersianDigit()" classname="kpy.util.extension.StringsKtTest" time="0.001"/>
+  <testcase name="isDecimalNumber()" classname="kpy.util.extension.StringsKtTest" time="0.008"/>
+  <testcase name="containsLatinLetter()" classname="kpy.util.extension.StringsKtTest" time="0.001"/>
+  <testcase name="containsPersianDigit()" classname="kpy.util.extension.StringsKtTest" time="0.001"/>
+  <testcase name="isIntegerNumber()" classname="kpy.util.extension.StringsKtTest" time="0.001"/>
+  <testcase name="isDigit()" classname="kpy.util.extension.StringsKtTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

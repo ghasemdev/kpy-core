@@ -4,7 +4,7 @@ package kpy.util.extension
 * Strings Extension Method
 *
 * @author jakode
-* @since v1.0.0 07/21/2021
+* @since v2.0.0 08/23/2021
 */
 
 /**
@@ -13,11 +13,29 @@ package kpy.util.extension
  */
 fun StringBuilder.appendSpace(): StringBuilder = append(" ")
 
-/** check is a english string*/
-fun String.isEnglish() = this.matches(Regex("\\w*"))
+val String.isAlphanumeric: Boolean
+    get() = matches(Regex("\\w*"))
 
-/** check is a number*/
-fun String.isNumber() = this.matches(Regex("\\d*"))
+val String.isDigit: Boolean
+    get() = matches(Regex("\\d*"))
 
-/** check is a persian number*/
-fun String.isPersianNumber() = this.matches(Regex("[۰-۹]*"))
+val String.isPersianDigit: Boolean
+    get() = matches(Regex("[۰-۹]*"))
+
+val String.containsLatinLetter: Boolean
+    get() = matches(Regex(".*[A-Za-z].*"))
+
+val String.containsDigit: Boolean
+    get() = matches(Regex(".*[0-9].*"))
+
+val String.containsPersianDigit: Boolean
+    get() = matches(Regex(".*[۰-۹].*"))
+
+val String.hasLettersAndDigits: Boolean
+    get() = containsLatinLetter && containsDigit
+
+val String.isIntegerNumber: Boolean
+    get() = toIntOrNull() != null
+
+val String.isDecimalNumber: Boolean
+    get() = toDoubleOrNull() != null

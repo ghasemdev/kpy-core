@@ -12,5 +12,7 @@ class EmailTest {
 
         assertThat(Email("jakode@@gmail.com").isValid()).isFalse()
         assertThat(Email("jakode@").isValid()).isFalse()
+
+        assertThat(Email("").isValid()).isFalse()
     }
 }

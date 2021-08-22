@@ -19,7 +19,7 @@ import kotlin.properties.Delegates
  * password.value = "password"
  * ```
  * @author jakode2020
- * @since v1.0.0 7/22/2021
+ * @since v1.1.0 08/22/2021
  */
 @Serializable
 open class Password {
@@ -54,13 +54,13 @@ open class Password {
         private lateinit var uppercaseHolder: (Boolean) -> Unit
         private lateinit var specialCharHolder: (Boolean) -> Unit
         private lateinit var whitespaceHolder: (Boolean) -> Unit
-        private var passwordLength = 8
+        private var passwordLength = 0
 
         init {
             initialize()
         }
 
-        fun isValidLength(length: Int = passwordLength, initialize: (Boolean) -> Unit) {
+        fun isValidLength(length: Int = 8, initialize: (Boolean) -> Unit) {
             passwordLength = length
             lengthHolder = initialize
         }

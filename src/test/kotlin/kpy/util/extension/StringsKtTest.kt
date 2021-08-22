@@ -11,27 +11,81 @@ class StringsKtTest {
     }
 
     @Test
-    fun isEnglish() {
-        assertThat("123".isEnglish()).isTrue()
-        assertThat("hello".isEnglish()).isTrue()
-        assertThat("YES".isEnglish()).isTrue()
-        assertThat("Hello".isEnglish()).isTrue()
-        assertThat("Hello1400".isEnglish()).isTrue()
-
-        assertThat("۵۰۵".isEnglish()).isFalse()
-        assertThat("سلام".isEnglish()).isFalse()
+    fun isAlphanumeric() {
+        assertThat("123".isAlphanumeric).isTrue()
+        assertThat("hello".isAlphanumeric).isTrue()
+        assertThat("YES".isAlphanumeric).isTrue()
+        assertThat("Hello".isAlphanumeric).isTrue()
+        assertThat("Hello1400".isAlphanumeric).isTrue()
+        assertThat("۵۰۵".isAlphanumeric).isFalse()
+        assertThat("سلام".isAlphanumeric).isFalse()
     }
 
     @Test
-    fun isNumber() {
-        assertThat("7865".isNumber()).isTrue()
-        assertThat("salam".isNumber()).isFalse()
-        assertThat("الکی".isNumber()).isFalse()
+    fun isDigit() {
+        assertThat("7865".isDigit).isTrue()
+        assertThat("salam".isDigit).isFalse()
+        assertThat("hr56".isDigit).isFalse()
+        assertThat("الکی".isDigit).isFalse()
     }
 
     @Test
-    fun isPersianNumber() {
-        assertThat("۰۹۱۵۲۱۶۵۵۰۵".isPersianNumber()).isTrue()
-        assertThat("09152165505".isPersianNumber()).isFalse()
+    fun isPersianDigit() {
+        assertThat("۰۹۱۵۲۱۶۵۵۰۵".isPersianDigit).isTrue()
+        assertThat("09152165505".isPersianDigit).isFalse()
+        assertThat("۵۲s".isPersianDigit).isFalse()
+        assertThat("۵۲ض".isPersianDigit).isFalse()
+    }
+
+    @Test
+    fun containsLatinLetter() {
+        assertThat("Hello1400".containsLatinLetter).isTrue()
+        assertThat("Hello".containsLatinLetter).isTrue()
+        assertThat("hello".containsLatinLetter).isTrue()
+        assertThat("Helloسلام".containsLatinLetter).isTrue()
+        assertThat("0".containsLatinLetter).isFalse()
+        assertThat("ا".containsLatinLetter).isFalse()
+    }
+
+    @Test
+    fun containsDigit() {
+        assertThat("Hello1400".containsDigit).isTrue()
+        assertThat("1234".containsDigit).isTrue()
+        assertThat("hello".containsDigit).isFalse()
+        assertThat("سلام".containsDigit).isFalse()
+        assertThat("۱۵۲۱۶۵".containsDigit).isFalse()
+    }
+
+    @Test
+    fun containsPersianDigit() {
+        assertThat("Hello۲۱".containsPersianDigit).isTrue()
+        assertThat("۲۱".containsPersianDigit).isTrue()
+        assertThat("hello".containsPersianDigit).isFalse()
+        assertThat("سلام5".containsPersianDigit).isFalse()
+        assertThat("125".containsPersianDigit).isFalse()
+    }
+
+    @Test
+    fun hasLettersAndDigits() {
+        assertThat("Hello55".hasLettersAndDigits).isTrue()
+        assertThat("hello".hasLettersAndDigits).isFalse()
+        assertThat("125".hasLettersAndDigits).isFalse()
+    }
+
+    @Test
+    fun isIntegerNumber() {
+        assertThat("123".isIntegerNumber).isTrue()
+        assertThat("012".isIntegerNumber).isTrue()
+        assertThat("12.5".isIntegerNumber).isFalse()
+        assertThat("q".isIntegerNumber).isFalse()
+    }
+
+    @Test
+    fun isDecimalNumber() {
+        assertThat("123.56".isDecimalNumber).isTrue()
+        assertThat("127".isDecimalNumber).isTrue()
+        assertThat("012".isDecimalNumber).isTrue()
+        assertThat("012.65".isDecimalNumber).isTrue()
+        assertThat("q".isDecimalNumber).isFalse()
     }
 }

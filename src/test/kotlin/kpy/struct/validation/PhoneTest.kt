@@ -14,5 +14,7 @@ class PhoneTest {
         assertThat(Phone("0123456789").isValid()).isFalse()
         assertThat(Phone("0515216480").isValid()).isFalse()
         assertThat(Phone("+169150000000").isValid()).isFalse()
+
+        assertThat(Phone("").isValid()).isFalse()
     }
 }
