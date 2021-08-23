@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.struct.DataStateKtTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-23T16:29:10" hostname="DESKTOP-GB548BL" time="0.003">
+  <properties/>
+  <testcase name="dataState()" classname="kpy.struct.DataStateKtTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.utils.FormatterKtTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-23T16:29:11" hostname="DESKTOP-GB548BL" time="0.003">
+  <properties/>
+  <testcase name="remove decimal part()" classname="kpy.utils.FormatterKtTest" time="0.001"/>
+  <testcase name="separate number with pattern()" classname="kpy.utils.FormatterKtTest" time="0.0"/>
+  <testcase name="creditCardFormatted()" classname="kpy.utils.FormatterKtTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

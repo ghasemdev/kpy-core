@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.github.jakode2020'
-version = '0.7.0'
+version = '0.8.0'
 
 repositories {
     mavenCentral()
@@ -63,5 +63,5 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 }
 
 allOpen {
-    annotation("kpy.util.annotations.Mockable")
+    annotation("kpy.annotations.Mockable")
 }

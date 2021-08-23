@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.random.RandomKtTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-08-23T16:29:10" hostname="DESKTOP-GB548BL" time="0.05">
+  <properties/>
+  <testcase name="choice list()" classname="kpy.random.RandomKtTest" time="0.023"/>
+  <testcase name="choices set()" classname="kpy.random.RandomKtTest" time="0.02"/>
+  <testcase name="choices list()" classname="kpy.random.RandomKtTest" time="0.001"/>
+  <testcase name="choice map()" classname="kpy.random.RandomKtTest" time="0.002"/>
+  <testcase name="choice set()" classname="kpy.random.RandomKtTest" time="0.0"/>
+  <testcase name="choices array()" classname="kpy.random.RandomKtTest" time="0.001"/>
+  <testcase name="choice array()" classname="kpy.random.RandomKtTest" time="0.0"/>
+  <system-out><![CDATA[?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 1 -> 1?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 2 -> 0?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 3 -> 3?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 4 -> 0?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 5 -> 1?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 1 -> 2?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 2 -> 1?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 3 -> 2?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 4 -> 2?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 5 -> 3?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 1 -> 0?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 2 -> 3?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 3 -> 0?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 4 -> 2?[0m
+?[0;36m[23/08/2021-20:59:10] [Test worker] INFO/CHOICES_ARRAY 5 -> 15?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

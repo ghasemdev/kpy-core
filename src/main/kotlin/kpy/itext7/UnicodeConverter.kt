@@ -1,9 +1,9 @@
 package kpy.itext7
 
-import kpy.util.extension.appendSpace
-import kpy.util.extension.isAlphanumeric
-import kpy.util.extension.isDigit
-import kpy.util.extension.isPersianDigit
+import kpy.utils.appendSpace
+import kpy.utils.isAlphanumeric
+import kpy.utils.isDigit
+import kpy.utils.isPersianDigit
 
 /**
  * # Unicode Converter

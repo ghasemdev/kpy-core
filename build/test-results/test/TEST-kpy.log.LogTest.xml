@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.log.LogTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-08-23T16:29:10" hostname="DESKTOP-GB548BL" time="0.033">
+  <properties/>
+  <testcase name="log DEBUG with tag()" classname="kpy.log.LogTest" time="0.021"/>
+  <testcase name="log WARN with tag()" classname="kpy.log.LogTest" time="0.001"/>
+  <testcase name="log INFO with tag()" classname="kpy.log.LogTest" time="0.001"/>
+  <testcase name="log DEBUG()" classname="kpy.log.LogTest" time="0.0"/>
+  <testcase name="log ERROR()" classname="kpy.log.LogTest" time="0.001"/>
+  <testcase name="log ERROR with tag()" classname="kpy.log.LogTest" time="0.002"/>
+  <testcase name="log INFO()" classname="kpy.log.LogTest" time="0.001"/>
+  <testcase name="log WARN()" classname="kpy.log.LogTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

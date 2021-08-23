@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.utils.ConditionsKtTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-23T16:29:11" hostname="DESKTOP-GB548BL" time="0.003">
+  <properties/>
+  <testcase name="ifNull()" classname="kpy.utils.ConditionsKtTest" time="0.0"/>
+  <testcase name="ifNull with returns value()" classname="kpy.utils.ConditionsKtTest" time="0.0"/>
+  <testcase name="ifNotNull with returns value()" classname="kpy.utils.ConditionsKtTest" time="0.001"/>
+  <testcase name="ifNotNull()" classname="kpy.utils.ConditionsKtTest" time="0.0"/>
+  <system-out><![CDATA[null : is nullnull : is nullvalue is hellovalue is hello]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.utils.StringsKtTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-08-23T16:29:11" hostname="DESKTOP-GB548BL" time="0.012">
+  <properties/>
+  <testcase name="lastPathComponent()" classname="kpy.utils.StringsKtTest" time="0.002"/>
+  <testcase name="containsDigit()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="isAlphanumeric()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="appendSpace()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="hasLettersAndDigits()" classname="kpy.utils.StringsKtTest" time="0.0"/>
+  <testcase name="isPersianDigit()" classname="kpy.utils.StringsKtTest" time="0.0"/>
+  <testcase name="isDecimalNumber()" classname="kpy.utils.StringsKtTest" time="0.003"/>
+  <testcase name="containsLatinLetter()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="containsPersianDigit()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="isIntegerNumber()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="isDigit()" classname="kpy.utils.StringsKtTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,7 +1,6 @@
 package kpy.annotations
 
 import com.google.common.truth.Truth.assertThat
-import kpy.util.annotations.Mockable
 import org.junit.jupiter.api.Test
 
 class MockableTest {

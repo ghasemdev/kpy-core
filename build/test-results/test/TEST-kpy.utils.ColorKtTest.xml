@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.utils.ColorKtTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-23T16:29:10" hostname="DESKTOP-GB548BL" time="0.045">
+  <properties/>
+  <testcase name="awtColor()" classname="kpy.utils.ColorKtTest" time="0.041"/>
+  <testcase name="hexToRGB()" classname="kpy.utils.ColorKtTest" time="0.0"/>
+  <testcase name="colorToHexString()" classname="kpy.utils.ColorKtTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
