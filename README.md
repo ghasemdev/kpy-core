@@ -22,7 +22,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.jakode2020:Kpy:0.7.0'
+    implementation 'com.github.jakode2020:Kpy:0.8.0'
 }
 ```
 
