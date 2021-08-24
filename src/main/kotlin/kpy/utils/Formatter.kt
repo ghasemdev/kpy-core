@@ -28,16 +28,19 @@ val Double.removeDecimalPart: String
         return if (this == numberToInt.toDouble()) numberToInt.toString() else toString()
     }
 
+internal val decimalFormat = DecimalFormat()
+
 /**
  * Number separator with pattern
  * @return default pattern is ,###.##
  */
-fun Number.separate(pattern: String = ",###.##"): String {
-    return DecimalFormat(pattern).format(this)
+fun Number.separate(pattern: String = "#,###.##"): String {
+    decimalFormat.applyPattern(pattern)
+    return decimalFormat.format(this)
 }
 
 /** Format string as credit card number */
-fun String.creditCardFormatted(separator: String = " ", separatorDigit: Int = 4): String {
+fun String.formatCreditCard(separator: String = " ", separatorDigit: Int = 4): String {
     val preparedString = replace(" ", "").trim()
     return buildString {
         for (i in preparedString.indices) {

@@ -1,7 +1,11 @@
 package kpy.utils
 
 import java.util.*
+import kotlin.Comparator
 import kotlin.collections.ArrayDeque
+import kotlin.collections.ArrayList
+import kotlin.collections.HashSet
+import kotlin.collections.LinkedHashSet
 
 /*
 * Collection builders & extension methods
@@ -9,6 +13,8 @@ import kotlin.collections.ArrayDeque
 * @author jakode
 * @since v3.2.0 08/23/2021
 */
+
+val <T> Collection<T>.lastIndex: Int get() = size - 1
 
 /**
  * Return an integer Array from range

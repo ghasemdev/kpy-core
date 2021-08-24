@@ -19,16 +19,16 @@ class MathKtTest {
 
     @Test
     fun degrees() {
-        assertThat(0.5.degrees.round(2)).isEqualTo(28.65F)
-        assertThat(1.degrees.round(2)).isEqualTo(57.30F)
-        assertThat(2.degrees.round(2)).isEqualTo(114.59F)
+        assertThat(0.5.asDegrees.round(2)).isEqualTo(28.65F)
+        assertThat(1.asDegrees.round(2)).isEqualTo(57.30F)
+        assertThat(2.asDegrees.round(2)).isEqualTo(114.59F)
     }
 
     @Test
     fun radians() {
-        assertThat(45.radians.round(2)).isEqualTo(0.79F)
-        assertThat(90.radians.round(2)).isEqualTo(1.57F)
-        assertThat(180.radians.round(2)).isEqualTo(3.14F)
+        assertThat(45.asRadians.round(2)).isEqualTo(0.79F)
+        assertThat(90.asRadians.round(2)).isEqualTo(1.57F)
+        assertThat(180.asRadians.round(2)).isEqualTo(3.14F)
     }
 
     @Test

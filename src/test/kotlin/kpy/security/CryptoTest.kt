@@ -58,17 +58,17 @@ class CryptoTest {
     fun `hash password`() {
         val hash = crypto.hashContent("1234")
 
-        assertThat(hash.hex).isEqualTo("DA 4C 79 A8 FF E0 95 24 E8 E6 C3 1B C6 A1 AE 9B")
-        Log.i(hash.hex, "hash password toHex:")
+        assertThat(hash.asHex).isEqualTo("DA 4C 79 A8 FF E0 95 24 E8 E6 C3 1B C6 A1 AE 9B")
+        Log.i(hash.asHex, "hash password toHex:")
 
-        assertThat(hash.reversedHex).isEqualTo("9B AE A1 C6 1B C3 E6 E8 24 95 E0 FF A8 79 4C DA")
-        Log.i(hash.reversedHex, "hash password toReversedHex:")
+        assertThat(hash.asReversedHex).isEqualTo("9B AE A1 C6 1B C3 E6 E8 24 95 E0 FF A8 79 4C DA")
+        Log.i(hash.asReversedHex, "hash password toReversedHex:")
 
-        assertThat(hash.dec).isEqualTo("218761211682552241493623223019527198161174155")
-        Log.i(hash.dec, "hash password toDec:")
+        assertThat(hash.asDec).isEqualTo("218761211682552241493623223019527198161174155")
+        Log.i(hash.asDec, "hash password toDec:")
 
-        assertThat(hash.reversedDec).isEqualTo("155174161198271952302323614922425516812176218")
-        Log.i(hash.reversedDec, "hash password toReversedDec:")
+        assertThat(hash.asReversedDec).isEqualTo("155174161198271952302323614922425516812176218")
+        Log.i(hash.asReversedDec, "hash password toReversedDec:")
     }
 
     @Test
@@ -87,8 +87,8 @@ class CryptoTest {
     @Test
     @Order(7)
     fun `length hashes and encrypted content`() {
-        val hashedPhone = crypto.hashContent("09152165050").hex
-        val hashedEmail = crypto.hashContent("shirdelghasem79@gmail.com").hex
+        val hashedPhone = crypto.hashContent("09152165050").asHex
+        val hashedEmail = crypto.hashContent("shirdelghasem79@gmail.com").asHex
         Log.i(hashedPhone.length, "hashedPhone length:")
         Log.i(hashedEmail.length, "hashedEmail length:")
 

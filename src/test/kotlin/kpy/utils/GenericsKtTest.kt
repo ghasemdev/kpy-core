@@ -2,8 +2,9 @@ package kpy.utils
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
+import java.util.*
 
-class ConditionsKtTest {
+class GenericsKtTest {
 
     @Test
     fun ifNull() {
@@ -67,5 +68,45 @@ class ConditionsKtTest {
             "i am not null"
         }
         assertThat(result2).isEqualTo("i am not null")
+    }
+
+    @Test
+    fun isNull() {
+        val text: String? = null
+        assertThat(text.isNull()).isTrue()
+
+        val text2 = "hi"
+        assertThat(text2.isNull()).isFalse()
+    }
+
+    @Test
+    fun isNotNull() {
+        val text: String? = null
+        assertThat(text.isNotNull()).isFalse()
+
+        val text2 = "hi"
+        assertThat(text2.isNotNull()).isTrue()
+    }
+
+    @Test
+    fun orZero() {
+        val num = 5
+        assertThat(num.orZero()).isEqualTo(5)
+
+        val long: Long? = null
+        assertThat(long.orZero()).isEqualTo(0L)
+
+        val float: Float? = null
+        assertThat(float.orZero()).isEqualTo(0F)
+
+        val double: Double? = null
+        assertThat(double.orZero()).isEqualTo(0.0)
+    }
+
+    @Test
+    fun orDefault() {
+        val date: Date? = null
+        val now = Date()
+        assertThat(date.orDefault(now)).isEqualTo(now)
     }
 }

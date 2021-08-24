@@ -25,13 +25,13 @@ class FormatterKtTest {
     }
 
     @Test
-    fun creditCardFormatted() {
-        assertThat("1234567890123456".creditCardFormatted()).isEqualTo("1234 5678 9012 3456")
-        assertThat("1234567890123456789".creditCardFormatted()).isEqualTo("1234 5678 9012 3456 789")
-        assertThat("12".creditCardFormatted()).isEqualTo("12")
+    fun formatCreditCard() {
+        assertThat("1234567890123456".formatCreditCard()).isEqualTo("1234 5678 9012 3456")
+        assertThat("1234567890123456789".formatCreditCard()).isEqualTo("1234 5678 9012 3456 789")
+        assertThat("12".formatCreditCard()).isEqualTo("12")
 
-        assertThat("1234567890123456".creditCardFormatted(separator = "-")).isEqualTo("1234-5678-9012-3456")
-        assertThat("1234567890123456789".creditCardFormatted(separator = "-")).isEqualTo("1234-5678-9012-3456-789")
-        assertThat("12".creditCardFormatted("@", 1)).isEqualTo("1@2")
+        assertThat("1234567890123456".formatCreditCard(separator = "-")).isEqualTo("1234-5678-9012-3456")
+        assertThat("1234567890123456789".formatCreditCard(separator = "-")).isEqualTo("1234-5678-9012-3456-789")
+        assertThat("12".formatCreditCard("@", 1)).isEqualTo("1@2")
     }
 }
