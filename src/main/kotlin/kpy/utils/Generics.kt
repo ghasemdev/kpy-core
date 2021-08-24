@@ -4,7 +4,7 @@ package kpy.utils
 * Generic
 *
 * @author jakode
-* @since v1.0.0 08/24/2021
+* @since v2.0.0 08/24/2021
 */
 
 /**
@@ -65,4 +65,12 @@ fun Number?.orZero(): Number = this ?: 0
  */
 fun <T> T?.orDefault(default: T): T {
     return this ?: default
+}
+
+/* try block without catching */
+inline fun tryOrIgnore(block: () -> Unit) {
+    try {
+        block()
+    } catch (e: Exception) {
+    }
 }

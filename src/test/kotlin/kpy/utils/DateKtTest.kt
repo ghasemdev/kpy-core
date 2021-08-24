@@ -8,7 +8,8 @@ class DateKtTest {
 
     @Test
     fun asDate() {
-        assertThat(1598435781.asDate).isEqualTo(Date(1598435781L * 1000))
+        assertThat(1598435781.asDate).isEqualTo(Date(1598435781L))
+        assertThat(999999999999999999L.asDate).isEqualTo(Date(999999999999999999L))
     }
 
     @Test
@@ -32,5 +33,23 @@ class DateKtTest {
     fun minusDate() {
         val date = Date()
         assertThat((date - date).time).isEqualTo(0)
+    }
+
+    @Test
+    fun asCalender() {
+        assertThat(Date().asCalendar).isInstanceOf(Calendar::class.java)
+    }
+
+    @Test
+    fun tomorrow() {
+        val date = Date()
+        assertThat(date.tomorrow).isEqualTo(Date(date.time + 1.day))
+    }
+
+    @Test
+    fun isSameDay() {
+        val date = Date()
+        val date2 = Date()
+        assertThat(date.isSameDay(date2)).isTrue()
     }
 }

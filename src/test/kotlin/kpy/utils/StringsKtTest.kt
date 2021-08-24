@@ -1,6 +1,7 @@
 package kpy.utils
 
 import com.google.common.truth.Truth.assertThat
+import kpy.log.Log
 import org.junit.jupiter.api.Test
 
 class StringsKtTest {
@@ -94,5 +95,24 @@ class StringsKtTest {
         assertThat("https://google.com/chrome/".lastPathComponent).isEqualTo("chrome")
         assertThat("C:\\Windows\\Fonts\\font.ttf".lastPathComponent).isEqualTo("font.ttf")
         assertThat("/dev/null".lastPathComponent).isEqualTo("null")
+    }
+
+    @Test
+    fun isHttp() {
+        assertThat("http://www.jakode.com".isHttp).isTrue()
+        assertThat("https://www.jakode.com".isHttp).isTrue()
+        assertThat("htt://www//".isHttp).isFalse()
+    }
+
+    @Test
+    fun `Url encoding`() {
+        val originalUrl = "https://www.google.co.nz/?gfe_rd=cr&ei=dzbFV&gws_rd=ssl#q=java"
+        val encodingUrl = originalUrl.urlEncode
+        Log.i(encodingUrl, "encoding url:")
+        assertThat(encodingUrl).isEqualTo("https%3A%2F%2Fwww.google.co.nz%2F%3Fgfe_rd%3Dcr%26ei%3DdzbFV%26gws_rd%3Dssl%23q%3Djava")
+
+        val decodedUrl = originalUrl.urlDecode
+        Log.i(decodedUrl, "decoded url:")
+        assertThat(decodedUrl).isEqualTo(originalUrl)
     }
 }

@@ -15,14 +15,14 @@ val timeFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss")
 val dateTimeFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy-HH:mm:ss")
 
 /** Remove decimal part when float number has .0 */
-val Float.removeDecimalPart: String
+inline val Float.removeDecimalPart: String
     get() {
         val numberToInt = toInt()
         return if (this == numberToInt.toFloat()) numberToInt.toString() else toString()
     }
 
 /** Remove decimal part when double number has .0 */
-val Double.removeDecimalPart: String
+inline val Double.removeDecimalPart: String
     get() {
         val numberToInt = toInt()
         return if (this == numberToInt.toDouble()) numberToInt.toString() else toString()

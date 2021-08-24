@@ -8,14 +8,26 @@ import java.util.*
 * Date
 *
 * @author jakode
-* @since v1.0.0 08/24/2021
+* @since v2.0.0 08/25/2021
 */
 
-private val simpleDateFormat = SimpleDateFormat()
+internal val simpleDateFormat = SimpleDateFormat()
 
 /** Convert int to date */
-val Int.asDate: Date
-    get() = Date(toLong() * 1000L)
+inline val Int.asDate: Date get() = Date(this.toLong())
+
+/** Convert long to date */
+inline val Long.asDate: Date get() = Date(this)
+
+/** Convert [Date] to [Calendar] */
+inline val Date.asCalendar: Calendar
+    get() {
+        val calendar = Calendar.getInstance()
+        calendar.time = this
+        return calendar
+    }
+
+inline val Date.tomorrow: Date get() = Date(time + 1.day)
 
 fun String.toDate(format: String): Date? {
     return try {
@@ -29,6 +41,12 @@ fun String.toDate(format: String): Date? {
 fun Date.toString(format: String): String {
     simpleDateFormat.applyPattern(format)
     return simpleDateFormat.format(this)
+}
+
+fun Date.isSameDay(date: Date): Boolean {
+    val day1 = asCalendar.get(Calendar.DAY_OF_YEAR)
+    val day2 = date.asCalendar.get(Calendar.DAY_OF_YEAR)
+    return day1 == day2
 }
 
 operator fun Date.plus(other: Date) = Date(time + other.time)

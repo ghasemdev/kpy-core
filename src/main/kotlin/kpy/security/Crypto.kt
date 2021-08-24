@@ -17,7 +17,7 @@ import javax.crypto.spec.SecretKeySpec
  * * Password Generate
  * * Url Encoding
  * @author jakode2020
- * @since v3.2.0 07/21/2021
+ * @since v3.3.0 08/25/2021
  */
 class Crypto(private val hashSalt: String, private val secretKey: String) {
 
@@ -48,13 +48,13 @@ class Crypto(private val hashSalt: String, private val secretKey: String) {
         return secretKeyFactory.generateSecret(pbeKeySpec).encoded
     }
 
-    /**Encrypt text with key*/
+    /** Encrypt text with key*/
     fun encrypt(text: String, key: String = secretKey): String {
         val encrypted = cipher(Cipher.ENCRYPT_MODE, key).doFinal(text.toByteArray(Charsets.UTF_8))
         return String(encoder.encode(encrypted))
     }
 
-    /** decrypt text with key*/
+    /** Decrypt text with key*/
     fun decrypt(text: String, key: String = secretKey): String {
         val byteStr = decoder.decode(text.toByteArray(Charsets.UTF_8))
         return String(cipher(Cipher.DECRYPT_MODE, key).doFinal(byteStr))
@@ -87,9 +87,9 @@ class Crypto(private val hashSalt: String, private val secretKey: String) {
         repeat(length) { append(values[random.nextInt(values.length)]) }
     }
 
-    /** Convert URL to encoded URL */
-    fun urlEncoding(originalUrl: String): String = Base64.getUrlEncoder().encodeToString(originalUrl.toByteArray())
+    /** Encodes the specified byte array into a String using the Base64 encoding scheme. */
+    fun urlEncode(originalUrl: String): String = Base64.getUrlEncoder().encodeToString(originalUrl.toByteArray())
 
-    /** Convert encoded URL to URL */
-    fun urlDecoding(encodedUrl: String): String = String(Base64.getUrlDecoder().decode(encodedUrl))
+    /** Decodes a Base64 encoded String into a newly-allocated byte array using the Base64 encoding scheme. */
+    fun urlDecode(encodedUrl: String): String = String(Base64.getUrlDecoder().decode(encodedUrl))
 }

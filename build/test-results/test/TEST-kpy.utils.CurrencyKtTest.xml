@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kpy.utils.CurrencyKtTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-24T14:09:06" hostname="DESKTOP-GB548BL" time="0.023">
-  <properties/>
-  <testcase name="formatPrice" classname="kpy.utils.CurrencyKtTest" time="0.023"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

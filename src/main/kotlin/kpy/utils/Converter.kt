@@ -8,17 +8,17 @@ package kpy.utils
 */
 
 /** byte array to hex*/
-val ByteArray.asHex: String
+inline val ByteArray.asHex: String
     get() = joinToString(" ") { "%02X".format(it) }
 
 /** byte array to reversed hex*/
-val ByteArray.asReversedHex: String
+inline val ByteArray.asReversedHex: String
     get() = reversedArray().joinToString(" ") { "%02X".format(it) }
 
 /** byte array to decimal*/
-val ByteArray.asDec: String
+inline val ByteArray.asDec: String
     get() = buildString { this@asDec.forEach { append("%02X".format(it).toLong(16)) } }
 
 /** byte array to reversed decimal*/
-val ByteArray.asReversedDec: String
+inline val ByteArray.asReversedDec: String
     get() = buildString { this@asReversedDec.reversedArray().forEach { append("%02X".format(it).toLong(16)) } }

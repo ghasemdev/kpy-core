@@ -14,9 +14,9 @@ fun isOdd(x: Int) = x % 2 != 0
 
 fun isEven(x: Int) = x % 2 == 0
 
-val Number.asDegrees: Float get() = toFloat() * (180F / PI).toFloat()
+inline val Number.asDegrees: Float get() = toFloat() * (180F / PI).toFloat()
 
-val Number.asRadians: Float get() = toFloat() * (PI / 180F).toFloat()
+inline val Number.asRadians: Float get() = toFloat() * (PI / 180F).toFloat()
 
 fun round(number: Float, digits: Int = 0): Float {
     return if (digits == 0) {

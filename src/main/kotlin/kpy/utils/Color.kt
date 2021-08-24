@@ -4,7 +4,7 @@ import java.awt.Color
 import java.awt.Color.decode
 
 /** convert hex color to AWT color */
-val String.awtColor: Color?
+inline val String.awtColor: Color?
     get() {
         val r = substring(1, 3).toIntOrNull(16) ?: return null
         val g = substring(3, 5).toIntOrNull(16) ?: return null
@@ -13,7 +13,7 @@ val String.awtColor: Color?
     }
 
 /** convert hex color to RGB */
-val String.hexToRGB: Triple<String, String, String>
+inline val String.hexToRGB: Triple<String, String, String>
     get() {
         var name = this
         if (!name.startsWith("#")) {
@@ -28,5 +28,5 @@ val String.hexToRGB: Triple<String, String, String>
     }
 
 /** convert color to Hex */
-val Int.colorToHexString: String
+inline val Int.colorToHexString: String
     get() = String.format("#%06X", -0x1 and this).replace("#FF", "#")

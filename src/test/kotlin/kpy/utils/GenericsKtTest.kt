@@ -109,4 +109,14 @@ class GenericsKtTest {
         val now = Date()
         assertThat(date.orDefault(now)).isEqualTo(now)
     }
+
+    @Test
+    fun tryOrIgnore() {
+        var num = 0
+        tryOrIgnore {
+            num = 22
+            Exception("throw")
+        }
+        assertThat(num).isEqualTo(22)
+    }
 }

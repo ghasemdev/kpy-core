@@ -9,10 +9,10 @@ import java.util.Locale
 * @since v1.0.0 08/24/2021
 */
 
-val Int.centsToDollars: Double
+inline val Int.centsToDollars: Double
     get() = toDouble() / 100.0
 
-val Int.centsToDollarsFormat: String
+inline val Int.centsToDollarsFormat: String
     get() {
         val dollars = this / 100
         val cents = this % 100

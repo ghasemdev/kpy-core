@@ -14,7 +14,7 @@ import kotlin.collections.LinkedHashSet
 * @since v3.2.0 08/23/2021
 */
 
-val <T> Collection<T>.lastIndex: Int get() = size - 1
+inline val <T> Collection<T>.lastIndex: Int get() = size - 1
 
 /**
  * Return an integer Array from range

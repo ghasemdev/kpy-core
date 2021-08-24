@@ -108,11 +108,11 @@ class CryptoTest {
     @Order(8)
     fun `Url encoding`() {
         val originalUrl = "https://www.google.co.nz/?gfe_rd=cr&ei=dzbFV&gws_rd=ssl#q=java"
-        val encodingUrl = crypto.urlEncoding(originalUrl)
+        val encodingUrl = crypto.urlEncode(originalUrl)
         Log.i(encodingUrl, "encoding url:")
         assertThat(encodingUrl).isEqualTo("aHR0cHM6Ly93d3cuZ29vZ2xlLmNvLm56Lz9nZmVfcmQ9Y3ImZWk9ZHpiRlYmZ3dzX3JkPXNzbCNxPWphdmE=")
 
-        val decodedUrl = crypto.urlDecoding(encodingUrl)
+        val decodedUrl = crypto.urlDecode(encodingUrl)
         Log.i(decodedUrl, "decoded url:")
         assertThat(decodedUrl).isEqualTo(originalUrl)
     }
