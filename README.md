@@ -5,7 +5,7 @@
 
 # What is Kpy ?
 
-[![Release](https://img.shields.io/github/release/jakode2020/Kpy.svg?style=flat)](https://jitpack.io/#jakode2020/Kpy)
+[![Release](https://img.shields.io/github/release/jakode2020/Kpy.svg?style=flat)](https://jitpack.io/#jakode2020/kpy-core)
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.5.21-ff8a0d.svg)](https://kotlinlang.org)
 
 Kpy is a Kotlin library that adds methods for easy programming
