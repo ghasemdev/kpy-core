@@ -9,6 +9,18 @@ import kotlin.random.Random
 class RandomKtTest {
 
     @Test
+    fun nextInt() {
+        val random = Random.nextInt(start = 1, end = 10, step = 2)
+        assertThat(random, `in`(kpy.utils.listOf(1..10)))
+    }
+
+    @Test
+    fun nextLong() {
+        val random = Random.nextLong(start = 1L, end = 10L, step = 2L)
+        assertThat(random, `in`(kpy.utils.listOf(1L..10L)))
+    }
+
+    @Test
     fun `choice array`() {
         val array = arrayOf(1, 2, 3, 4, 5)
         val number = Random.choice(array)

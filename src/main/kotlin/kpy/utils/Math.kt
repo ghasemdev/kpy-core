@@ -35,7 +35,19 @@ fun round(number: Double, digits: Int = 0): Double {
 }
 
 @JvmName("roundEx")
-fun Float.round(digits: Int = 0) = round(this, digits)
+fun Float.round(digits: Int = 0): Float {
+    return if (digits == 0) {
+        kotlin.math.round(this)
+    } else {
+        DecimalFormat("###.${"#" * digits}").format(this).toFloat()
+    }
+}
 
 @JvmName("roundEx")
-fun Double.round(digits: Int = 0) = round(this, digits)
+fun Double.round(digits: Int = 0): Double {
+    return if (digits == 0) {
+        kotlin.math.round(this)
+    } else {
+        DecimalFormat("###.${"#" * digits}").format(this).toDouble()
+    }
+}

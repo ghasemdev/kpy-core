@@ -6,10 +6,8 @@ import kotlin.random.Random
 * Random extensions method from python language
 *
 * author jakode
-* since v2.0.0 07/22/2021
+* since v3.0.0 08/26/2021
 */
-
-private val rand = Random
 
 /**
  * Gets the next random `Int` from the random number generator.
@@ -18,11 +16,8 @@ private val rand = Random
  * @param end End of range
  * @param step range steps
  */
-fun Random.nextInt(start: Int = 0, end: Int, step: Int = 1) = randomInt(start, end, step)
-
-private fun randomInt(start: Int, end: Int, step: Int): Int {
-    return rand.nextInt((end + step - start) / step) * step + start
-}
+fun Random.nextInt(start: Int = 0, end: Int, step: Int = 1) =
+    nextInt((end + step - start) / step) * step + start
 
 /**
  * Gets the next random `Long` from the random number generator.
@@ -31,24 +26,18 @@ private fun randomInt(start: Int, end: Int, step: Int): Int {
  * @param end End of range
  * @param step range steps
  */
-fun Random.nextLong(start: Long = 0, end: Long, step: Long = 1) = randomLong(start, end, step)
-
-private fun randomLong(start: Long, end: Long, step: Long): Long {
-    return rand.nextLong((end + step - start) / step) * step + start
-}
+fun Random.nextLong(start: Long = 0, end: Long, step: Long = 1) =
+    nextLong((end + step - start) / step) * step + start
 
 /** Returns a random element from this vararg */
-fun <T> Random.choice(vararg elements: T): T {
-    val length = elements.size
-    return elements[rand.nextInt(length)]
-}
+fun <T> Random.choice(vararg elements: T): T = elements[nextInt(elements.size)]
 
 /** Returns a random element from this array */
 @JvmName("choiceArray")
-fun <T> Random.choice(array: Array<T>): T = choice(*array)
+fun <T> Random.choice(array: Array<T>): T = array[nextInt(array.size)]
 
 /** Returns a random element from this list */
-inline fun <reified T> Random.choice(list: List<T>): T = choice(*list.toTypedArray())
+fun <T> Random.choice(list: List<T>): T = list[nextInt(list.size)]
 
 /** Returns a random element from this set */
 inline fun <reified T> Random.choice(set: Set<T>): T = choice(*set.toTypedArray())

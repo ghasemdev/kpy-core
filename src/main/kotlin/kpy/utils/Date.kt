@@ -8,13 +8,13 @@ import java.util.*
 * Date
 *
 * @author jakode
-* @since v2.0.0 08/25/2021
+* @since v2.1.0 08/26/2021
 */
 
 internal val simpleDateFormat = SimpleDateFormat()
 
 /** Convert int to date */
-inline val Int.asDate: Date get() = Date(this.toLong())
+inline val Int.asDate: Date get() = Date(toLong())
 
 /** Convert long to date */
 inline val Long.asDate: Date get() = Date(this)

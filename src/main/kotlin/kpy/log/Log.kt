@@ -1,6 +1,7 @@
 package kpy.log
 
 import kpy.utils.dateTimeFormatter
+import kpy.utils.ifNotNull
 import java.time.LocalDateTime
 
 /**
@@ -9,37 +10,52 @@ import java.time.LocalDateTime
  * for debug coroutines set `(-Dkotlinx.coroutines.debug)` to VM Option
  *
  * @author jakode
- * @since v1.1.0 07/21/2021
+ * @since v2.0.0 08/25/2021
  */
 object Log {
     /** log INFO massage with time, current thread and tag */
     fun i(massage: Any, tag: String? = null) {
-        val (now, thread, _tag) = logInit(tag)
-        println(ConsoleColors.CYAN + "[$now] [$thread] INFO$_tag $massage" + ConsoleColors.RESET)
+        val (now, thread) = logInit()
+        println(
+            ConsoleColors.CYAN + "[$now] [$thread] INFO${
+                tag.ifNotNull { "/$it" }.orEmpty()
+            } $massage" + ConsoleColors.RESET
+        )
     }
 
     /** log DEBUG massage with time, current thread and tag */
     fun d(massage: Any, tag: String? = null) {
-        val (now, thread, _tag) = logInit(tag)
-        println(ConsoleColors.PURPLE + "[$now] [$thread] DEBUG$_tag $massage" + ConsoleColors.RESET)
+        val (now, thread) = logInit()
+        println(
+            ConsoleColors.PURPLE + "[$now] [$thread] DEBUG${
+                tag.ifNotNull { "/$it" }.orEmpty()
+            } $massage" + ConsoleColors.RESET
+        )
     }
 
     /** log WARN massage with time, current thread and tag */
     fun w(massage: Any, tag: String? = null) {
-        val (now, thread, _tag) = logInit(tag)
-        println(ConsoleColors.YELLOW + "[$now] [$thread] WARN$_tag $massage" + ConsoleColors.RESET)
+        val (now, thread) = logInit()
+        println(
+            ConsoleColors.YELLOW + "[$now] [$thread] WARN${
+                tag.ifNotNull { "/$it" }.orEmpty()
+            } $massage" + ConsoleColors.RESET
+        )
     }
 
     /** log ERROR massage with time, current thread and tag */
     fun e(error: Throwable, tag: String? = null) {
-        val (now, thread, _tag) = logInit(tag)
-        println(ConsoleColors.RED + "[$now] [$thread] ERROR$_tag $error" + ConsoleColors.RESET)
+        val (now, thread) = logInit()
+        println(
+            ConsoleColors.RED + "[$now] [$thread] ERROR${
+                tag.ifNotNull { "/$it" }.orEmpty()
+            } $error" + ConsoleColors.RESET
+        )
     }
 
-    private fun logInit(tag: String?): Triple<String, String, String> {
+    private fun logInit(): Pair<String, String> {
         val now = LocalDateTime.now().format(dateTimeFormatter)
         val thread = Thread.currentThread().name
-        val _tag = tag?.let { "/$it" } ?: ""
-        return Triple(now, thread, _tag)
+        return Pair(now, thread)
     }
 }

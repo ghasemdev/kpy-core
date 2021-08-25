@@ -41,11 +41,11 @@ inline val String.lastPathComponent: String
     get() {
         var path = this
         if (path.endsWith("/"))
-            path = path.substring(0, path.length - 1)
+            path = path.substring(0, path.lastIndex)
         var index = path.lastIndexOf('/')
         if (index < 0) {
             if (path.endsWith("\\"))
-                path = path.substring(0, path.length - 1)
+                path = path.substring(0, path.lastIndex)
             index = path.lastIndexOf('\\')
             if (index < 0)
                 return path

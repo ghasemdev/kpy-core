@@ -250,7 +250,7 @@ fun priorityQueueOf(range: LongRange): PriorityQueue<Long> = PriorityQueue(range
  * @param comparator initiate queue order
  */
 fun <T> priorityQueueOf(comparator: Comparator<T>? = null): PriorityQueue<T> =
-    comparator?.let { PriorityQueue(comparator) } ?: PriorityQueue()
+    comparator.ifNotNull { PriorityQueue(comparator) }.orDefault(PriorityQueue())
 
 /**
  * Return a doubly queue from elements

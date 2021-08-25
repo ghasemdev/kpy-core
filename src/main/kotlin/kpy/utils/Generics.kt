@@ -11,29 +11,23 @@ package kpy.utils
  * ifNull execute when value is null
  * @return value or [Unit]
  */
-inline fun <T> T?.ifNull(function: (T?) -> Any): Any {
-    if (this == null) {
-        return function(this)
-    }
-    return this
+inline fun <T> T?.ifNull(block: (T?) -> Any): Any {
+    return this ?: block(this)
 }
 
 /**
  * ifNotNull execute when value isn't null
  * @return value or [Unit]
  */
-inline fun <T> T?.ifNotNull(function: (T) -> Any): Any? {
-    if (this != null) {
-        return function(this)
-    }
-    return this
+inline fun <T, R> T?.ifNotNull(block: (T) -> R): R? {
+    return if (this != null) block(this) else this
 }
 
 /** Checking nullability */
-fun Any?.isNull() = this == null
+fun <T> T?.isNull() = this == null
 
 /** Checking none nullability */
-fun Any?.isNotNull() = this != null
+fun <T> T?.isNotNull() = this != null
 
 /**
  * when long is null default value is zero

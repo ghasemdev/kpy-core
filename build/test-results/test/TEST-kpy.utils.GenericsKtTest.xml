@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.utils.GenericsKtTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-08-25T20:17:40" hostname="DESKTOP-GB548BL" time="0.015">
+  <properties/>
+  <testcase name="ifNull()" classname="kpy.utils.GenericsKtTest" time="0.001"/>
+  <testcase name="isNull()" classname="kpy.utils.GenericsKtTest" time="0.0"/>
+  <testcase name="orZero()" classname="kpy.utils.GenericsKtTest" time="0.0"/>
+  <testcase name="ifNull with returns value()" classname="kpy.utils.GenericsKtTest" time="0.001"/>
+  <testcase name="ifNotNull with returns value()" classname="kpy.utils.GenericsKtTest" time="0.0"/>
+  <testcase name="ifNotNull()" classname="kpy.utils.GenericsKtTest" time="0.002"/>
+  <testcase name="orDefault()" classname="kpy.utils.GenericsKtTest" time="0.0"/>
+  <testcase name="isNotNull()" classname="kpy.utils.GenericsKtTest" time="0.001"/>
+  <testcase name="tryOrIgnore()" classname="kpy.utils.GenericsKtTest" time="0.001"/>
+  <system-out><![CDATA[null : is nullnull : is nullvalue is hellovalue is hello]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

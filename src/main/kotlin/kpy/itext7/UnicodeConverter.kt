@@ -9,7 +9,7 @@ import kpy.utils.isPersianDigit
  * # Unicode Converter
  * Convert text to persian unicode
  * @author Jakode
- * @since v1.1.0 07/21/2021
+ * @since v2.0.0 08/25/2021
  */
 object UnicodeConverter {
 
@@ -73,11 +73,11 @@ object UnicodeConverter {
         for (index in text.indices) {
             val currentChar = Character(text[index])
 
-            if (!currentChar.isPersianCharacter()) {
+            if (!currentChar.isPersianCharacter) {
                 unicode.add(Pair(Character.State.Isolated, reverseCharacter(text[index]).toString()))
             } else {
                 if (index == 0) {
-                    if (currentChar.numberOfShape() == 2) {
+                    if (currentChar.numberOfShape == 2) {
                         unicode.add(Pair(Character.State.Isolated, currentChar.isolated))
                     } else {
                         if (text.length == 1) {
@@ -89,9 +89,9 @@ object UnicodeConverter {
                 } else {
                     val previousChar = Character(text[index - 1])
 
-                    if (previousChar.numberOfShape() <= 2) {
+                    if (previousChar.numberOfShape <= 2) {
                         unicode.add(Pair(Character.State.Isolated, currentChar.isolated))
-                    } else if (previousChar.numberOfShape() == 4) {
+                    } else if (previousChar.numberOfShape == 4) {
                         when (unicode.last().first) {
                             Character.State.Isolated -> {
                                 unicode[index - 1] = Pair(Character.State.Beginning, previousChar.beginning)
@@ -333,15 +333,16 @@ object UnicodeConverter {
 
         override fun toString() = "isolated = $isolated, beginning = $beginning, middle = $middle, end = $end"
 
-        fun numberOfShape(): Int {
-            var result = 0
-            if (isolated.isNotEmpty()) result++
-            if (beginning.isNotEmpty()) result++
-            if (middle.isNotEmpty()) result++
-            if (end.isNotEmpty()) result++
-            return result
-        }
+        val numberOfShape: Int
+            get() {
+                var result = 0
+                if (isolated.isNotEmpty()) result++
+                if (beginning.isNotEmpty()) result++
+                if (middle.isNotEmpty()) result++
+                if (end.isNotEmpty()) result++
+                return result
+            }
 
-        fun isPersianCharacter() = numberOfShape() != 0
+        val isPersianCharacter: Boolean get() = numberOfShape != 0
     }
 }

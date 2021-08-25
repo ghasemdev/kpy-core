@@ -24,7 +24,7 @@ fun <T> print(vararg message: T?, separator: String = " ", end: String = "\n") {
         for (index in message.indices) {
             append(message[index])
             // The last element doesn't need separator
-            if (index != message.size - 1) append(separator)
+            if (index != message.lastIndex) append(separator)
         }
         append(end)
     })

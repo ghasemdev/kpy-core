@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kpy.utils.StringsKtTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2021-08-25T20:17:40" hostname="DESKTOP-GB548BL" time="0.027">
+  <properties/>
+  <testcase name="lastPathComponent()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="containsDigit()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="isAlphanumeric()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="appendSpace()" classname="kpy.utils.StringsKtTest" time="0.0"/>
+  <testcase name="hasLettersAndDigits()" classname="kpy.utils.StringsKtTest" time="0.0"/>
+  <testcase name="isPersianDigit()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="isHttp()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="isDecimalNumber()" classname="kpy.utils.StringsKtTest" time="0.005"/>
+  <testcase name="Url encoding()" classname="kpy.utils.StringsKtTest" time="0.003"/>
+  <testcase name="containsLatinLetter()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="containsPersianDigit()" classname="kpy.utils.StringsKtTest" time="0.0"/>
+  <testcase name="isIntegerNumber()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <testcase name="isDigit()" classname="kpy.utils.StringsKtTest" time="0.001"/>
+  <system-out><![CDATA[?[0;36m[26/08/2021-00:47:40] [Test worker] INFO/encoding url: https%3A%2F%2Fwww.google.co.nz%2F%3Fgfe_rd%3Dcr%26ei%3DdzbFV%26gws_rd%3Dssl%23q%3Djava?[0m
+?[0;36m[26/08/2021-00:47:40] [Test worker] INFO/decoded url: https://www.google.co.nz/?gfe_rd=cr&ei=dzbFV&gws_rd=ssl#q=java?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
