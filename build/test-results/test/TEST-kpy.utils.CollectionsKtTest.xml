@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kpy.utils.CollectionsKtTest" tests="37" skipped="0" failures="0" errors="0" timestamp="2021-08-25T20:17:40" hostname="DESKTOP-GB548BL" time="0.047">
+<testsuite name="kpy.utils.CollectionsKtTest" tests="37" skipped="0" failures="0" errors="0" timestamp="2021-08-26T14:44:14" hostname="DESKTOP-GB548BL" time="0.032">
   <properties/>
-  <testcase name="find triple of sum long()" classname="kpy.utils.CollectionsKtTest" time="0.003"/>
-  <testcase name="build vector from range()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
+  <testcase name="find triple of sum long()" classname="kpy.utils.CollectionsKtTest" time="0.002"/>
+  <testcase name="build vector from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="add new items()" classname="kpy.utils.CollectionsKtTest" time="0.003"/>
-  <testcase name="testVectorOf()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
+  <testcase name="testVectorOf()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="build list from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
-  <testcase name="build priority queue from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
+  <testcase name="build priority queue from range()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
   <testcase name="testLinkedListOf()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="find triple of sum int()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
   <testcase name="testHashTableOf()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
   <testcase name="testHead()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
-  <testcase name="testTail()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
+  <testcase name="testTail()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="build array from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="build stack from range()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
   <testcase name="build hash set from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="find pair of sum double()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
-  <testcase name="find pair of sum long()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
-  <testcase name="build sorted set from range()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
-  <testcase name="build mutable set from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
-  <testcase name="find triple of sum float()" classname="kpy.utils.CollectionsKtTest" time="0.002"/>
+  <testcase name="find pair of sum long()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
+  <testcase name="build sorted set from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
+  <testcase name="build mutable set from range()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
+  <testcase name="find triple of sum float()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
   <testcase name="build linked set from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="build deque from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="refresh list()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="testQueueOf()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
-  <testcase name="find pair of sum int()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
-  <testcase name="build linked list from range()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
+  <testcase name="find pair of sum int()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
+  <testcase name="build linked list from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="find pair of sum float()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
-  <testcase name="testDequeOf()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
-  <testcase name="testArrayDequeOf()" classname="kpy.utils.CollectionsKtTest" time="0.006"/>
-  <testcase name="testPriorityQueueOf()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
+  <testcase name="testDequeOf()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
+  <testcase name="testArrayDequeOf()" classname="kpy.utils.CollectionsKtTest" time="0.007"/>
+  <testcase name="testPriorityQueueOf()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="build array deque from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
-  <testcase name="build array list from range()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
-  <testcase name="build queue from range()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
-  <testcase name="lastIndex()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
-  <testcase name="testStackOf()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
-  <testcase name="find triple of sum double()" classname="kpy.utils.CollectionsKtTest" time="0.001"/>
+  <testcase name="build array list from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
+  <testcase name="build queue from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
+  <testcase name="lastIndex()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
+  <testcase name="testStackOf()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
+  <testcase name="find triple of sum double()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="build mutable list from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <testcase name="build set from range()" classname="kpy.utils.CollectionsKtTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

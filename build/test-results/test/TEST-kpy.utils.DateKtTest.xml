@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="kpy.utils.DateKtTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-08-25T20:17:39" hostname="DESKTOP-GB548BL" time="0.015">
+<testsuite name="kpy.utils.DateKtTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-08-26T14:44:14" hostname="DESKTOP-GB548BL" time="0.005">
   <properties/>
-  <testcase name="plusDate" classname="kpy.utils.DateKtTest" time="0.003"/>
+  <testcase name="plusDate" classname="kpy.utils.DateKtTest" time="0.002"/>
   <testcase name="asDate" classname="kpy.utils.DateKtTest" time="0.0"/>
   <testcase name="convertDate" classname="kpy.utils.DateKtTest" time="0.001"/>
-  <testcase name="tomorrow" classname="kpy.utils.DateKtTest" time="0.002"/>
-  <testcase name="asCalender" classname="kpy.utils.DateKtTest" time="0.002"/>
-  <testcase name="minusDate" classname="kpy.utils.DateKtTest" time="0.001"/>
-  <testcase name="isSameDay" classname="kpy.utils.DateKtTest" time="0.001"/>
+  <testcase name="tomorrow" classname="kpy.utils.DateKtTest" time="0.0"/>
+  <testcase name="asCalender" classname="kpy.utils.DateKtTest" time="0.001"/>
+  <testcase name="minusDate" classname="kpy.utils.DateKtTest" time="0.0"/>
+  <testcase name="isSameDay" classname="kpy.utils.DateKtTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,5 +1,5 @@
 <div align='center'>
-    <img src="kpy.png" alt="kpy logo" width="400" height="400">
+    <img src="assest/kpy.png" alt="kpy logo" width="400" height="400">
 </div>
 
 
