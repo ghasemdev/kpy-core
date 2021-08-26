@@ -8,7 +8,7 @@
 [![Release](https://img.shields.io/github/release/jakode2020/Kpy.svg?style=flat)](https://jitpack.io/#jakode2020/kpy-core)
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.5.30-ff8a0d.svg)](https://kotlinlang.org)
 
-Kpy is a Kotlin library that adds methods for easy programming
+Kpy is a Kotlin library that adds methods and structs for easy programming. some of those method added from other languages and some of is extension functions.
 
 # Download
 ### Gradle Setup
