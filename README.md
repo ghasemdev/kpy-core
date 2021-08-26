@@ -10,24 +10,44 @@
 
 Kpy is a Kotlin library that adds methods for easy programming
 
+# Download
 ### Gradle Setup
-
-***
-```gradle
+Step 1. Add the JitPack repository to your `build.gradle` file
+```
 allprojects {
     repositories {
         ...
         maven { url 'https://jitpack.io' }
     }
 }
-
+```
+Step 2. Add the dependency
+```
 dependencies {
     implementation 'com.github.jakode2020:kpy-core:1.0.1'
 }
 ```
-
-### License
 ***
+### Maven Setup
+Step 1. Add the JitPack repository to your `build.gradle` file
+```
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+Step 2. Add the dependency
+```
+<dependency>
+    <groupId>com.github.jakode2020</groupId>
+    <artifactId>kpy-core</artifactId>
+    <version>1.0.1</version>
+</dependency>
+```
+***
+### License
 ```
 Copyright 2021 Jakode2020 
 
